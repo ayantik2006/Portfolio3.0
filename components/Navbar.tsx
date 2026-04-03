@@ -26,7 +26,7 @@ function Navbar() {
       <div className="w-full flex items-center justify-between px-6 py-3 max-w-3xl">
         <div className="flex items-center gap-8 text-sm text-neutral-400 font-semibold">
           <Link href={"/"}>Home</Link>
-          <Link href={""}>Projects</Link>
+          <Link href={"/projects"}>Projects</Link>
           <Link href={""}>Blog</Link>
           <Link href={"/resume"}>Resume</Link>
         </div>
