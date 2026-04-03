@@ -1,6 +1,7 @@
 import { Check, Volume2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Hanken_Grotesk } from "next/font/google";
+import { useRef, useState } from "react";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -10,6 +11,8 @@ const hanken = Hanken_Grotesk({
 
 function Name() {
   const { theme, setTheme } = useTheme();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(false);
 
   return (
     <div className="flex flex-col items-center gap-3 mt-10">
@@ -33,7 +36,19 @@ function Name() {
           <Volume2
             className={`stroke-zinc-400 duration-300 ${theme === "dark" ? "hover:stroke-white" : "hover:stroke-black"}`}
             size={18}
+            onClick={() => {
+              if (!audioRef.current) return;
+
+              if (playing) {
+                audioRef.current.pause();
+              } else {
+                audioRef.current.play();
+              }
+
+              setPlaying(!playing);
+            }}
           />
+          <audio ref={audioRef} src="/name.m4a" onEnded={() => setPlaying(false)} />
         </div>
       </div>
       <div
