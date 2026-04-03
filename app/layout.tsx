@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ayantik Sarkar - Full Stack Developer",
-  description: "Portfolio of Ayantik Sarkar",
+  description: "Building scalable web apps and UI systems using Next.js, React, and modern technologies.Creator of Pulse UI and CTO at Hoardspace.",
 };
 
 export default function RootLayout({
@@ -30,6 +31,20 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-CDDPV5XE5T`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CDDPV5XE5T');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider
           attribute="class"
