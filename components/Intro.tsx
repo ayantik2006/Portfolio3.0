@@ -21,7 +21,7 @@ function Intro() {
 
   return (
     <div
-      className={`mt-10 w-full flex justify-between ${hanken.className} px20`}
+      className={`mt-10 w-full flex gap-2 [@media(max-width:534px)]:flex-col justify-between ${hanken.className} px20`}
     >
       <div
         className={`text-sm flex flex-col gap-2 ${theme === "dark" ? "text-neutral-200" : ""}`}
