@@ -118,6 +118,56 @@ export default function Page() {
             </div>
           </div>
         </div>
+        <div className="flex gap-3 mr-auto mt-10">
+          <ProjectIcon />
+          <div className="flex flex-col gap-3">
+            <h1 className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"/>
+              <a href="https://elimics.com" target="_blank">
+                Elimics
+              </a>
+              <p className="text-sm text-neutral-500">ongoing</p>
+              <Link href={"https://github.com/ayantik2006/pulse-ui"} target="_blank"><FaGithub/></Link>
+            </h1>
+            <div className="w-fit p-2 border-2 rounded-lg">
+              <Image src={"/elimics-thumbnail.png"} width={300} height={200} alt="" className="rounded-md"/>
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Built Elimics — a smart link intelligence platform</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Turned static links into trackable, insight-driven experiences</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Enabled real-time analytics (views, clicks, engagement tracking)</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Designed scalable backend for link processing & data capture</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Developed clean, fast UI using Next.js & Tailwind</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Implemented secure link generation & access control</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Focused on performance, simplicity, and actionable insights</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">Built foundation for upcoming paid links & monetization features</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="w-full h-1 border-3 mt-4 border-dashed mb-10"></div>
         <Footer/>
