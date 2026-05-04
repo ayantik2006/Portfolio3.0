@@ -48,6 +48,14 @@ function Intro() {
           <p>
             Building &nbsp;
             <a
+              href="https://elimics.com"
+              target="_blank"
+              className="hover:underline font-semibold"
+            >
+              Elimics 
+            </a>
+            &nbsp;&nbsp;and&nbsp;&nbsp;
+            <a
               href="https://pulseui-henna.vercel.app/"
               target="_blank"
               className="hover:underline font-semibold"
