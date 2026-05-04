@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ayantik Sarkar - Full Stack Developer",
-  description: "Building scalable web apps and UI systems using Next.js, React, and modern technologies.Creator of Pulse UI and CTO at Hoardspace.",
+  description: "Building scalable web apps and UI systems using Next.js, React, and modern technologies.Creator of Pulse UI and Elimics and CTO at Hoardspace.",
 };
 
 export default function RootLayout({
