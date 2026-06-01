@@ -17,7 +17,7 @@ function IntroEmail() {
       </a>
 
       <button
-        className={`p-1 duration-300 rounded group ${theme == "dark" ? "hover:bg-neutral-800" : ""}`}
+        className={`p-1 duration-300 rounded group ${theme == "dark" ? "hover:bg-neutral-800" : "hover:bg-neutral-200/60"}`}
         onClick={()=>{
             navigator.clipboard.writeText("ayantik.sarkar2020@gmail.com");
             setIsCopied(true);
