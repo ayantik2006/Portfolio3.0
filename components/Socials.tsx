@@ -12,13 +12,13 @@ const hanken = Hanken_Grotesk({
 function Socials() {
   return (
     <div
-      className={`w-full p-2 h-fit border-2 mt-10 rounded-lg flex flex-col gap-2 ${hanken.className} font-semibold`}
+      className={`w-full p-2 h-fit border-2 mt-10 rounde flex flex-col gap-2 ${hanken.className} font-semibold`}
     >
       <div className="flex flex-col sm:flex-row gap-2">
         <Link
           href={"https://www.linkedin.com/in/ayantiksarkar/"}
           target="_blank"
-          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-lg flex items-center justify-between p-3 pl-5"
+          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
         >
           <div className="flex gap-4 items-center">
             <div className="border dark:border-neutral-800 rounded">
@@ -45,7 +45,7 @@ function Socials() {
         <Link
           href={"https://x.com/ayantik2006"}
           target="_blank"
-          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-lg flex items-center justify-between p-3 pl-5"
+          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
         >
           <div className="flex gap-4 items-center">
             <div className="border dark:border-neutral-800 rounded bg-white p-2">
@@ -74,7 +74,7 @@ function Socials() {
         <Link
           href={"https://t.co/qVRpIZYDxG"}
           target="_blank"
-          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-lg flex items-center justify-between p-3 pl-5"
+          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
         >
           <div className="flex gap-4 items-center">
             <div className="border dark:border-neutral-800 rounded bg-white p-1">
