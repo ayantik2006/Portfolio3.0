@@ -1,36 +1,29 @@
 import Image from "next/image";
+import { Scale } from "./Scale";
 import { useTheme } from "next-themes";
 import { useState } from "react";
-import { NoiseBackground } from "@/components/ui/noise-background";
 
 function Banner() {
-  const { theme, setTheme } = useTheme();
-  const [isMousePressedOnPic, setIsMousePressedOnPic] = useState(false);
-  const [isProfilePic,setIsProfilePic]=useState(true);
+  const {theme} = useTheme()
 
   return (
-    <div className="w-full h-30 border-2 p-2 rounded-lg">
-      <div className="w-full h-full border-2 flex items-center justify-center rounded-lg">
-        <div
-          className={`rounded-full translate-y-6 p-2 border-2 ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} duration-400 ${isMousePressedOnPic?"scale-[0.7] rotate-y-180":"scale-[1]"}`}
-          onMouseDown={() => {
-            setIsMousePressedOnPic(true);
-        }}
-        onMouseUp={()=>{
-            setIsMousePressedOnPic(false);
-            setIsProfilePic((prev)=>!prev);
+    <div className="p-3 relative w-fit mx-auto sm:mx-0">
+      <div className="relative w-32 h-32 sm:w-40 sm:h-40">
+        <Scale className="h-1 absolute top-0 -left-3.5 w-[calc(100%+30px)]" />
+        <Scale className="w-1 absolute -top-3.5 left-0 h-[calc(100%+30px)]" />
+        <Image
+          src={"/profile-pic.png"}
+          width={150}
+          height={150}
+          alt="Ayantik Sarkar"
+          className="rounded-full p-4 sm:p-5 w-full h-full"
+          draggable={false}
+          style={{
+            filter: theme==="dark"?"brightness(80%)":"brightness(100%)",
           }}
-        >
-          <div className="rounded-full">
-            <Image
-              src={isProfilePic?"/profile-pic.png":"/avatar.png"}
-              width={100}
-              height={200}
-              alt="Ayantik Sarkar"
-              className="rounded-full"
-            ></Image>
-          </div>
-        </div>
+        />
+        <Scale className="w-1 absolute -top-3.5 right-0 h-[calc(100%+30px)]" />
+        <Scale className="h-1 absolute bottom-0 -left-3.5 w-[calc(100%+30px)]" />
       </div>
     </div>
   );

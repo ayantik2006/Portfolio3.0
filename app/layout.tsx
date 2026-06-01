@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Script from "next/script";
+import LayoutScales from "@/components/LayoutScales";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,7 +55,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {children}
+            <LayoutScales />
+            <Navbar />
+            <div className="pt-16">{children}</div>
           </TooltipProvider>
         </ThemeProvider>
       </body>

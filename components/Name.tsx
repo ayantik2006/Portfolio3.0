@@ -2,6 +2,7 @@ import { Check, Volume2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Hanken_Grotesk } from "next/font/google";
 import { useRef, useState } from "react";
+import TextFlip from "@/components/TextFlip";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -10,14 +11,14 @@ const hanken = Hanken_Grotesk({
 });
 
 function Name() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="flex flex-col items-center gap-3 mt-10">
-      <div className="flex gap-2 items-center">
-        <h1 className={`text-3xl ${hanken.className} font-semibold`}>
+    <div className="flex flex-col items-center sm:items-start mt-2 sm:mt-16 w-full">
+      <div className="flex gap-2 items-center flex-wrap justify-center sm:justify-start">
+        <h1 className={`text-xl sm:text-2xl ${hanken.className} font-semibold text-center sm:text-left`}>
           Ayantik Sarkar
         </h1>
         <svg
@@ -51,14 +52,8 @@ function Name() {
           <audio ref={audioRef} src="/name.m4a" onEnded={() => setPlaying(false)} />
         </div>
       </div>
-      <div
-        className={`flex items-center gap-4 mr-2 text-sm ${hanken.className} text-[#ABABAD] ${theme === "dark" ? "" : ""}`}
-      >
-        <p>Developer</p>
-        <div className="bg-[#ABABAD] w-[0.2rem] h-[0.2rem] rounded-full"></div>
-        <p>Builder</p>
-        <div className="bg-[#ABABAD] w-[0.2rem] h-[0.2rem] rounded-full"></div>
-        <p>Student</p>
+      <div className={`flex w-full gap-4 text-sm ${hanken.className} text-[#ABABAD] justify-center sm:justify-start`}>
+        <TextFlip words={["Full Stack Developer","Design Engineer","Figma to Code"]} className="font-mono" duration={2000} />
       </div>
     </div>
   );

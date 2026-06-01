@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Hanken_Grotesk } from "next/font/google";
@@ -10,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import Footer from "@/components/Footer";
+import { Scale } from "@/components/Scale";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -32,8 +32,7 @@ export default function Page() {
     <div
       className={`min-h-screen items-center justify-center ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
     >
-      <Navbar />
-      <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl border-l-4 border-r-4 mx-auto border-dashed">
+      <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl mx-auto">
         <h1
           className={`text-2xl ${hanken.className} font-semibold mr-auto mt-5`}
         >
@@ -42,40 +41,63 @@ export default function Page() {
         <h2 className="mr-auto mt-1 text-neutral-400">
           A selection of projects I&apos;ve built and shipped.
         </h2>
-        <div className="w-full h-1 border-3 mt-4 border-dashed mb-10"></div>
+        <Scale className="w-[99%] my-6 z-90 h-1" />
         <div className="flex gap-3 mr-auto">
           <ProjectIcon />
           <div className="flex flex-col gap-3">
             <h1 className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"/>
+              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
               <a href="https://hoardspace.in/" target="_blank">
                 HoardSpace
               </a>
-              <Link href={"https://github.com/ayantik2006/project-xenon"} target="_blank"><FaGithub/></Link>
+              <Link
+                href={"https://github.com/ayantik2006/project-xenon"}
+                target="_blank"
+              >
+                <FaGithub />
+              </Link>
             </h1>
             <div className="w-fit p-2 border-2 rounded-lg">
-              <Image src={"/hoardspace_thumbnail.png"} width={300} height={200} alt="" className="rounded-md"/>
+              <Image
+                src={"/hoardspace_thumbnail.png"}
+                width={300}
+                height={200}
+                alt=""
+                className="rounded-md"
+              />
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">CTO at Hoardspace — built a B2B marketplace for OOH/DOOH advertising</p>
+                <p className="text-sm text-neutral-500">
+                  CTO at Hoardspace — built a B2B marketplace for OOH/DOOH
+                  advertising
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Developed scalable frontend with Next.js & Tailwind</p>
+                <p className="text-sm text-neutral-500">
+                  Developed scalable frontend with Next.js & Tailwind
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Integrated maps and dynamic dashboards for ad discovery & management</p>
+                <p className="text-sm text-neutral-500">
+                  Integrated maps and dynamic dashboards for ad discovery &
+                  management
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Designed APIs and system architecture for booking workflows</p>
+                <p className="text-sm text-neutral-500">
+                  Designed APIs and system architecture for booking workflows
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Led product development from concept to deployment</p>
+                <p className="text-sm text-neutral-500">
+                  Led product development from concept to deployment
+                </p>
               </div>
             </div>
           </div>
@@ -84,36 +106,58 @@ export default function Page() {
           <ProjectIcon />
           <div className="flex flex-col gap-3">
             <h1 className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"/>
+              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
               <a href="https://pulseui-henna.vercel.app" target="_blank">
                 PulseUI
               </a>
               <p className="text-sm text-neutral-500">ongoing</p>
-              <Link href={"https://github.com/ayantik2006/pulse-ui"} target="_blank"><FaGithub/></Link>
+              <Link
+                href={"https://github.com/ayantik2006/pulse-ui"}
+                target="_blank"
+              >
+                <FaGithub />
+              </Link>
             </h1>
             <div className="w-fit p-2 border-2 rounded-lg">
-              <Image src={"/pulseui-thumbnail.png"} width={300} height={200} alt="" className="rounded-md"/>
+              <Image
+                src={"/pulseui-thumbnail.png"}
+                width={300}
+                height={200}
+                alt=""
+                className="rounded-md"
+              />
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Built Pulse UI — a modern reusable component library</p>
+                <p className="text-sm text-neutral-500">
+                  Built Pulse UI — a modern reusable component library
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Developed scalable components using React, Next.js & Tailwind</p>
+                <p className="text-sm text-neutral-500">
+                  Developed scalable components using React, Next.js & Tailwind
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Created Pulse Toast (npm package with <b>1500+ downloads</b>)</p>
+                <p className="text-sm text-neutral-500">
+                  Created Pulse Toast (npm package with <b>1500+ downloads</b>)
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Designed APIs and system architecture for booking workflows</p>
+                <p className="text-sm text-neutral-500">
+                  Designed APIs and system architecture for booking workflows
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Focused on performance, accessibility, and developer experience</p>
+                <p className="text-sm text-neutral-500">
+                  Focused on performance, accessibility, and developer
+                  experience
+                </p>
               </div>
             </div>
           </div>
@@ -122,55 +166,84 @@ export default function Page() {
           <ProjectIcon />
           <div className="flex flex-col gap-3">
             <h1 className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"/>
+              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
               <a href="https://elimics.com" target="_blank">
                 Elimics
               </a>
               <p className="text-sm text-neutral-500">ongoing</p>
-              <Link href={"https://github.com/ayantik2006/pulse-ui"} target="_blank"><FaGithub/></Link>
+              <Link
+                href={"https://github.com/ayantik2006/pulse-ui"}
+                target="_blank"
+              >
+                <FaGithub />
+              </Link>
             </h1>
             <div className="w-fit p-2 border-2 rounded-lg">
-              <Image src={"/elimics-thumbnail.png"} width={300} height={200} alt="" className="rounded-md"/>
+              <Image
+                src={"/elimics-thumbnail.png"}
+                width={300}
+                height={200}
+                alt=""
+                className="rounded-md"
+              />
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Built Elimics — a smart link intelligence platform</p>
+                <p className="text-sm text-neutral-500">
+                  Built Elimics — a smart link intelligence platform
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Turned static links into trackable, insight-driven experiences</p>
+                <p className="text-sm text-neutral-500">
+                  Turned static links into trackable, insight-driven experiences
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Enabled real-time analytics (views, clicks, engagement tracking)</p>
+                <p className="text-sm text-neutral-500">
+                  Enabled real-time analytics (views, clicks, engagement
+                  tracking)
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Designed scalable backend for link processing & data capture</p>
+                <p className="text-sm text-neutral-500">
+                  Designed scalable backend for link processing & data capture
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Developed clean, fast UI using Next.js & Tailwind</p>
+                <p className="text-sm text-neutral-500">
+                  Developed clean, fast UI using Next.js & Tailwind
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Implemented secure link generation & access control</p>
+                <p className="text-sm text-neutral-500">
+                  Implemented secure link generation & access control
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Focused on performance, simplicity, and actionable insights</p>
+                <p className="text-sm text-neutral-500">
+                  Focused on performance, simplicity, and actionable insights
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
-                <p className="text-sm text-neutral-500">Built foundation for upcoming paid links & monetization features</p>
+                <p className="text-sm text-neutral-500">
+                  Built foundation for upcoming paid links & monetization
+                  features
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="w-full h-1 border-3 mt-4 border-dashed mb-10"></div>
-        <Footer/>
+        <Scale className="w-[99%] my-6 z-90 h-1" />
+        <Footer />
       </div>
     </div>
   );

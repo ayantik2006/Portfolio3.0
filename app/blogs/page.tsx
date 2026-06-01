@@ -1,10 +1,10 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Hanken_Grotesk } from "next/font/google";
 import ColourfulText from "@/components/ui/colourful-text";
+import { Scale } from "@/components/Scale";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -27,7 +27,6 @@ export default function Page() {
     <div
       className={`min-h-screen items-center justify-center ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
     >
-      <Navbar />
       <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl mx-auto ">
         <h1
           className={`text-2xl ${hanken.className} font-semibold mr-auto mt-5`}
@@ -37,7 +36,7 @@ export default function Page() {
         <h2 className="mr-auto mt-1 text-neutral-400">
           Insights, ideas, and lessons from building real-world projects
         </h2>
-        <div className="w-full h-1 border-3 mt-4 border-dashed mb-10"></div>
+        <Scale className="w-[99%] my-6 z-90 h-1" />
         <div className="text-xl font-semibold">
           <ColourfulText text="Coming soon..." />
         </div>

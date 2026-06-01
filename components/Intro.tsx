@@ -21,10 +21,10 @@ function Intro() {
 
   return (
     <div
-      className={`mt-10 w-full flex gap-2 [@media(max-width:534px)]:flex-col justify-between ${hanken.className} px20`}
+      className={`mt-10 w-full flex gap-6 sm:gap-2 flex-col sm:flex-row justify-between text-balance font-mono`}
     >
       <div
-        className={`text-sm flex flex-col gap-2 ${theme === "dark" ? "text-neutral-200" : ""}`}
+        className={`text-sm flex flex-col gap-2 min-w-0 ${theme === "dark" ? "text-neutral-200" : ""}`}
       >
         <div className="flex items-center gap-2">
           <IntroIcon
@@ -86,7 +86,7 @@ function Intro() {
         </div>
       </div>
       <div
-        className={`text-sm flex flex-col gap-2 ${theme === "dark" ? "text-neutral-200" : ""}`}
+        className={`text-sm flex flex-col gap-2 min-w-0 ${theme === "dark" ? "text-neutral-200" : ""}`}
       >
         <div className="flex items-center gap-2">
           <IntroIcon icon={<Mars size={16} className="stroke-[#9F9FA9]" />} />

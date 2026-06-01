@@ -14,7 +14,7 @@ function Socials() {
     <div
       className={`w-full p-2 h-fit border-2 mt-10 rounded-lg flex flex-col gap-2 ${hanken.className} font-semibold`}
     >
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         <Link
           href={"https://www.linkedin.com/in/ayantiksarkar/"}
           target="_blank"

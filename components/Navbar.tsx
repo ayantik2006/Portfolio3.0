@@ -22,15 +22,15 @@ function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className={`${hanken.className} w-full flex items-center justify-center transition-all z-80 duration-300 sticky top-0 backdrop-blur-lg`}>
-      <div className="w-full flex items-center justify-between px-6 py-3 max-w-3xl">
-        <div className="flex items-center gap-8 text-sm text-neutral-400 font-semibold">
+    <div className={`${hanken.className} w-full flex items-center justify-center transition-all z-[130] duration-300 fixed top-0 left-0 right-0 backdrop-blur-lg`}>
+      <div className="w-full flex items-center justify-between px-4 sm:px-6 py-3 max-w-3xl gap-3">
+        <div className="flex items-center gap-4 sm:gap-8 text-xs sm:text-sm text-neutral-400 font-semibold flex-wrap">
           <Link href={"/"}>Home</Link>
           <Link href={"/projects"}>Projects</Link>
           <Link href={"/blogs"}>Blog</Link>
           <Link href={"/resume"}>Resume</Link>
         </div>
-        <div className="flex items-center gap-">
+        <div className="flex items-center shrink-0">
           <Tooltip>
             <TooltipTrigger asChild>
               <button
@@ -42,7 +42,7 @@ function Navbar() {
                 <FaGithub />
               </button>
             </TooltipTrigger>
-            <TooltipContent className="z-90">
+            <TooltipContent className="z-1000">
               <p className={`font-semibold ${hanken.className}`}>
                 Visit GitHub
               </p>
@@ -61,7 +61,7 @@ function Navbar() {
                 {theme==="dark"?<FaRegMoon/>:<GoSun/>}
               </button>
             </TooltipTrigger>
-            <TooltipContent className="z-90">
+            <TooltipContent className="z-1000">
               <p className={`font-semibold ${hanken.className}`}>
                 Toggle Mode
               </p>
