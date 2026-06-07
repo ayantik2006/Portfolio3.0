@@ -21,7 +21,7 @@ function Intro() {
 
   return (
     <div
-      className={`mt-10 w-full flex gap-6 sm:gap-2 flex-col sm:flex-row justify-between text-balance font-mono`}
+      className={`mt-10 w-full flex gap-2 sm:gap-2 flex-col sm:flex-row justify-between text-balance font-mono p-2 sm:p-0`}
     >
       <div
         className={`text-sm flex flex-col gap-2 min-w-0 ${theme === "dark" ? "text-neutral-200" : ""}`}

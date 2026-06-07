@@ -18,7 +18,7 @@ function GitHub() {
   const contributions = getCachedContributions("ayantik2006");
   return (
     <div
-      className={`${hanken.className} mt-10 flex flex-col gap-5 justify-center w-full calendar-wrapper`}
+      className={`${hanken.className} mt-10 flex flex-col gap-5 justify-center w-full calendar-wrapper p-2 sm:p-0`}
     >
       <h1 className="">GitHub</h1>
       <Suspense fallback={<GitHubContributionsFallback />}>

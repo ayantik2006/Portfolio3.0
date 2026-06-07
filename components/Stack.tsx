@@ -15,7 +15,7 @@ function Stack() {
   const { theme, setTheme } = useTheme();
   return (
     <div
-      className={`${hanken.className} mt-10 flex flex-col gap-3 items-cente justify-center w-full`}
+      className={`${hanken.className} mt-10 flex flex-col gap-3 items-cente justify-center w-full p-2 sm:p-0`}
     >
       <div className="flex gap-3 items-center">
         {/* <MonitorCog size={22}/> */}

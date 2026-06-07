@@ -13,7 +13,7 @@ const hanken = Hanken_Grotesk({
 function Footer() {
   return (
     <div
-      className={`${hanken.className} flex flex-col items-cente justify-center mt-20 w-full`}
+      className={`${hanken.className} flex flex-col items-cente justify-center mt-20 w-full p-2 sm:p-0`}
     >
       <div>
         <p className="text-neutral-500">

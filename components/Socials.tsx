@@ -12,7 +12,7 @@ const hanken = Hanken_Grotesk({
 function Socials() {
   return (
     <div
-      className={`w-full p-2 h-fit border-2 mt-10 rounde flex flex-col gap-2 ${hanken.className} font-semibold`}
+      className={`max-w-full w-full p-2 h-fit border-2 mt-10 flex flex-col gap-2 ${hanken.className} font-semibold mx-3`}
     >
       <div className="flex flex-col sm:flex-row gap-2">
         <Link

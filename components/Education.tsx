@@ -12,7 +12,7 @@ function Education() {
   const { theme, setTheme } = useTheme();
   return (
     <div
-      className={`${hanken.className} mt-10 flex flex-col gap-3 justify-center w-full`}
+      className={`${hanken.className} mt-10 flex flex-col gap-3 justify-center w-full p-2 sm:p-0`}
     >
       <h1 className="">Education</h1>
       <div className="flex items-cente gap-3">
