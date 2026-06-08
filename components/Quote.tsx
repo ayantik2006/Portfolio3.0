@@ -1,0 +1,10 @@
+function Quote() {
+  return (
+    <div className="max-w-full w-full mb-10 p-8 flex flex-col dark: shadow-[inset_0_1px_4px_#606162] rounded-lg text-neutral-500">
+        <p className="text-lg font-semibold italic font-mono">It is better to perform one&apos;s own duty imperfectly than to master the duty of another.</p>
+        <p className="self-end italic font-mono">- Bhagavad Gita</p>
+    </div>
+  )
+}
+
+export default Quote

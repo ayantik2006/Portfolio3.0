@@ -3,6 +3,7 @@ import { Hanken_Grotesk } from "next/font/google";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Quote from "./Quote";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ function Footer() {
     <div
       className={`${hanken.className} flex flex-col items-cente justify-center mt-20 w-full p-2 sm:p-0`}
     >
+      <Quote/>
       <div>
         <p className="text-neutral-500">
           Inspired from{" "}
