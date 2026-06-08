@@ -61,7 +61,7 @@ function Intro() {
           <IntroIcon
             icon={<Lightbulb size={16} className="stroke-[#9F9FA9]" />}
           />
-          <p>
+          <div>
             CTO @
             <a
               href="https://hoardspace.in"
@@ -70,7 +70,8 @@ function Intro() {
             >
               hoardspace.in
             </a>
-          </p>
+            <div className="w-2.5 h-2.5 inline-block mx-2 animate-pulse bg-green-600 rounded-full"/>
+          </div>
         </motion.div>
         <motion.div className="flex items-center gap-2" variants={itemVariants}>
           <IntroIcon
