@@ -71,7 +71,7 @@ function ChatWidget() {
               <div className="flex flex-col">
                 <div className="text-black font-semibold text-sm flex gap-2">
                   <p>Ayantik Sarkar</p>
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse inline-block mt-[6px]" />
+                  {/* <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse inline-block mt-[6px]" /> */}
                 </div>
                 <p className="text-neutral-500 text-xs">
                   Drop a message to Ayantik!
