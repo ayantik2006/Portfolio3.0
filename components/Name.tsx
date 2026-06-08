@@ -1,9 +1,9 @@
 import { Check, Volume2 } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Hanken_Grotesk } from "next/font/google";
 import { useRef, useState } from "react";
 import TextFlip from "@/components/TextFlip";
 import { motion } from "framer-motion";
+import { Hanken_Grotesk } from "next/font/google";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],

@@ -29,7 +29,7 @@ function Education() {
             <h3 className="text-sm text-neutral-500">2025-2029</h3>
         </div>
       </div>
-      <div className="flex items-cente gap-3 mt-5">
+      {/* <div className="flex items-cente gap-3 mt-5">
         <div className={`p-1 w-fit h-fit border rounded-lg ${theme == "dark" ? "bg-neutral-900 border-neutral-700" : ""}`}>
           <div
             className={`flex items-center justify-center rounded-lg w-8 h-8 border ${theme == "dark" ? "bg-neutral-900" : "bg-neutral-100"}`}
@@ -42,8 +42,8 @@ function Education() {
             <h2 className="text-sm text-neutral-500">CBSE Class XII</h2>
             <h3 className="text-sm text-neutral-500">2023-2025</h3>
         </div>
-      </div>
-      <div className="flex items-cente gap-3 mt-5">
+      </div> */}
+      {/* <div className="flex items-cente gap-3 mt-5">
         <div className={`p-1 w-fit h-fit border rounded-lg ${theme == "dark" ? "bg-neutral-900 border-neutral-700" : ""}`}>
           <div
             className={`flex items-center justify-center rounded-lg w-8 h-8 border ${theme == "dark" ? "bg-neutral-900" : "bg-neutral-100"}`}
@@ -56,7 +56,7 @@ function Education() {
             <h2 className="text-sm text-neutral-500">ICSE Class X</h2>
             <h3 className="text-sm text-neutral-500">2012-2023</h3>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { QuoteIcon } from "lucide-react";
 
 function Quote() {
   return (
-    <div className="max-w-full w-full mb-10 p-8 flex flex-col dark: shadow-[inset_0_1px_4px_#606162] rounded-lg text-neutral-500">
+    <div className="max-w-full w-full mb-10 p-8 flex flex-col shadow-[inset_0_1px_4px_#606162] rounded-lg text-neutral-500">
       <p className="text-lg font-semibold italic font-mono">
         <span className="inline-block mr-4">
           <QuoteIcon className="rotate-180" size={17} />

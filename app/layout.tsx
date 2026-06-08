@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Script from "next/script";
 import LayoutScales from "@/components/LayoutScales";
 import Navbar from "@/components/Navbar";
+import ChatWidget from "@/components/ChatWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,6 +65,7 @@ export default function RootLayout({
           <TooltipProvider>
             <LayoutScales />
             <Navbar />
+            <ChatWidget/>
             <div className="pt-16">{children}</div>
           </TooltipProvider>
         </ThemeProvider>

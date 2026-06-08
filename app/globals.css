@@ -146,3 +146,27 @@
 @utility link-underline {
     @apply underline decoration-current/30 decoration-1 underline-offset-3 transition-colors hover:decoration-current;
 }
+
+@layer utilities {
+  .chat-widget-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .chat-widget-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .chat-widget-scrollbar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 9999px;
+  }
+
+  .chat-widget-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #d7dbe2;
+  }
+
+  .chat-widget-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db white;
+  }
+}

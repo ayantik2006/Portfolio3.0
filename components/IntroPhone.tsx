@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { Check, Copy } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
@@ -26,14 +27,51 @@ function IntroPhone() {
             }, 3000);
         }}
       >
-        {!isCopied && <Copy
-          size={14}
-          className={`group ${theme == "dark" ? "group-hover:stroke-white" : ""}`}
-        />}
-        {isCopied && <Check
-          size={14}
-          className={`group ${theme == "dark" ? "group-hover:stroke-white" : ""}`}
-        />}
+        <AnimatePresence mode="wait">
+          {!isCopied ? (
+            <motion.div
+              key={"copy"}
+              initial={{ scale: 0.8, opacity: 0 }}
+              exit={{
+                scale: 0.8,
+                opacity: 0,
+              }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+            >
+              <Copy
+                size={14}
+                className={`group ${theme == "dark" ? "group-hover:stroke-white" : ""}`}
+              />
+            </motion.div>
+          ) : (
+            <motion.div
+              key={"check"}
+              initial={{ scale: 0.8, opacity: 0 }}
+              exit={{
+                scale: 0.8,
+                opacity: 0,
+              }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+            >
+              <Check
+                size={14}
+                className={`group ${theme == "dark" ? "group-hover:stroke-white" : ""}`}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </button>
     </div>
   );

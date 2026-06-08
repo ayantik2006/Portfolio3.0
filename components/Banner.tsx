@@ -28,6 +28,7 @@ function Banner() {
             src={"/profile-pic.jpg"}
             width={160}
             height={160}
+            loading="eager"
             alt="Ayantik Sarkar"
             className="rounded-full p-4 sm:p-5 w-full h-full object-cover cursor-none"
             draggable={false}
