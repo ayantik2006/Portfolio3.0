@@ -7,6 +7,7 @@ import Script from "next/script";
 import LayoutScales from "@/components/LayoutScales";
 import Navbar from "@/components/Navbar";
 import ChatWidget from "@/components/ChatWidget";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,6 +67,7 @@ export default function RootLayout({
             <LayoutScales />
             <Navbar />
             <ChatWidget/>
+            <ScrollToTop/>
             <div className="pt-16">{children}</div>
           </TooltipProvider>
         </ThemeProvider>
