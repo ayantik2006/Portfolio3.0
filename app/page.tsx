@@ -12,6 +12,7 @@ import Education from "@/components/Education";
 import GitHub from "@/components/GitHub";
 import Footer from "@/components/Footer";
 import { Scale } from "@/components/Scale";
+import SpotifyWidget from "@/components/SpotifyWidget";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -45,6 +46,8 @@ export default function Home() {
         <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
         <Stack />
         <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
+        {/* <SpotifyWidget/> */}
+        {/* <Scale className="w-[99%] mx-2 z-90 h-2" /> */}
         <Education />
         <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
         <GitHub />

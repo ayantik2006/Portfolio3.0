@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import { Hanken_Grotesk } from "next/font/google";
 import ColourfulText from "@/components/ui/colourful-text";
 import { Scale } from "@/components/Scale";
+import Image from "next/image";
+import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -37,10 +40,45 @@ export default function Page() {
           Insights, ideas, and lessons from building real-world projects
         </h2>
         <Scale className="w-[99%] my-6 z-90 h-1" />
-        <div className="text-xl font-semibold">
-          <ColourfulText text="Coming soon..." />
+        <div className="flex flex-col gap-3 w-full">
+          <Blog
+            img="/blog1.png"
+            heading="What 1 Year of Frontend Development Taught Me About Building Memorable Websites"
+            date="12.06.2026"
+          />
         </div>
+        <Footer/>
       </div>
     </div>
   );
 }
+
+const Blog = ({
+  img,
+  heading,
+  date,
+}: {
+  img: string;
+  heading: string;
+  date: string;
+}) => {
+  return (
+    <Link href={"/blogs/what-one-year-frontend-dev-taught-me"} className="p-1 border-3 rounded-lg">
+      <div className="flex flex-col gap-6 p-6 border-2 rounded-md dark:bg-neutral-900 cursor-pointer dark:hover:bg-neutral-900/20 duration-300 bg-neutral-100 hover:bg-neutral-200/30">
+        <div className="rounded-lg h-full w-full">
+          <Image
+            src={img}
+            height={300}
+            width={300}
+            alt="blog1"
+            className="w-full rounded-lg"
+          />
+        </div>
+        <div className="">
+          <h1 className="font-semibold text-lg">{heading}</h1>
+        </div>
+        <p className="text-neutral-400 -mt-5">{date}</p>
+      </div>
+    </Link>
+  );
+};

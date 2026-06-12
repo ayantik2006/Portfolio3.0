@@ -18,7 +18,7 @@ function Socials() {
         <Link
           href={"https://www.linkedin.com/in/ayantiksarkar/"}
           target="_blank"
-          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
+          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-14 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
         >
           <div className="flex gap-4 items-center">
             <div className="border dark:border-neutral-800 rounded">
@@ -26,13 +26,13 @@ function Socials() {
                 src={
                   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
                 }
-                width={35}
-                height={35}
+                width={25}
+                height={25}
                 alt="linkedin"
               />
             </div>
             <div>
-              <p>LinkedIn</p>
+              <p className="text-sm">LinkedIn</p>
             </div>
           </div>
           <div>
@@ -45,7 +45,7 @@ function Socials() {
         <Link
           href={"https://x.com/ayantik2006"}
           target="_blank"
-          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
+          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-14 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
         >
           <div className="flex gap-4 items-center">
             <div className="border dark:border-neutral-800 rounded bg-white p-2">
@@ -53,13 +53,13 @@ function Socials() {
                 src={
                   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
                 }
-                width={20}
-                height={20}
+                width={10}
+                height={10}
                 alt="linkedin"
               />
             </div>
             <div>
-              <p>X</p>
+              <p className="text-sm">X</p>
             </div>
           </div>
           <div>
@@ -74,7 +74,7 @@ function Socials() {
         <Link
           href={"https://t.co/qVRpIZYDxG"}
           target="_blank"
-          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-18 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
+          className="flex-1 dark:hover:bg-neutral-950 hover:bg-neutral-200/30 duration-300 border border-neutral-300 dark:border-neutral-800 h-14 dark:bg-neutral-900 rounded-l flex items-center justify-between p-3 pl-5"
         >
           <div className="flex gap-4 items-center">
             <div className="border dark:border-neutral-800 rounded bg-white p-1">
@@ -82,13 +82,13 @@ function Socials() {
                 src={
                   "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
                 }
-                width={28}
-                height={28}
+                width={18}
+                height={18}
                 alt="linkedin"
               />
             </div>
             <div>
-              <p>GitHub</p>
+              <p className="text-sm">GitHub</p>
             </div>
           </div>
           <div>

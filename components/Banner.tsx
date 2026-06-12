@@ -45,7 +45,7 @@ function Banner() {
       </div>
       {isAvatarHovered && (
         <div
-          className="h-6 w-6 bg-transparent backdrop-blur-[0.1px] rounded-full fixed"
+          className="h-6 z-10000 w-6 bg-transparent backdrop-blur-[0.1px] rounded-full fixed"
           style={{
             left: x,
             top: y,
