@@ -48,13 +48,13 @@ export default function Page() {
             <h1 className="flex items-center gap-2">
               <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
               <a href="https://hoardspace.in/" target="_blank">
-                HoardSpace
+                HoardSpace Bookings Pvt. Ltd.
               </a>
               <Link
                 href={"https://github.com/ayantik2006/project-xenon"}
                 target="_blank"
               >
-                <FaGithub />
+                {/* <FaGithub /> */}
               </Link>
             </h1>
             <div className="w-fit p-2 border-2 rounded-lg">
@@ -108,14 +108,14 @@ export default function Page() {
             <h1 className="flex items-center gap-2">
               <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
               <a href="https://pulseui-henna.vercel.app" target="_blank">
-                PulseUI
+                PulseUI - Production-ready animated UI components
               </a>
               <p className="text-sm text-neutral-500">ongoing</p>
               <Link
                 href={"https://github.com/ayantik2006/pulse-ui"}
                 target="_blank"
               >
-                <FaGithub />
+                {/* <FaGithub /> */}
               </Link>
             </h1>
             <div className="w-fit p-2 border-2 rounded-lg">
@@ -168,14 +168,14 @@ export default function Page() {
             <h1 className="flex items-center gap-2">
               <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
               <a href="https://elimics.com" target="_blank">
-                Elimics
+                Elimics - Smart Link Analytics & URL Shortener{" "}
               </a>
               <p className="text-sm text-neutral-500">ongoing</p>
               <Link
                 href={"https://github.com/ayantik2006/pulse-ui"}
                 target="_blank"
               >
-                <FaGithub />
+                {/* <FaGithub /> */}
               </Link>
             </h1>
             <div className="w-fit p-2 border-2 rounded-lg">
@@ -236,6 +236,90 @@ export default function Page() {
                 <p className="text-sm text-neutral-500">
                   Built foundation for upcoming paid links & monetization
                   features
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-3 mr-auto mt-10">
+          <ProjectIcon />
+          <div className="flex flex-col gap-3">
+            <h1 className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
+              <a href="https://formas.space" target="_blank">
+                FormAS - Modern Form Backend for Developers
+              </a>
+              <p className="text-sm text-neutral-500">ongoing</p>
+              <Link
+                href={"https://github.com/ayantik2006/pulse-ui"}
+                target="_blank"
+              >
+                {/* <FaGithub /> */}
+              </Link>
+            </h1>
+            <div className="w-fit p-2 border-2 rounded-lg">
+              <Image
+                src={"/formas.jpg"}
+                width={300}
+                height={200}
+                alt=""
+                className="rounded-md"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Built FormAS, a Form Backend as a Service that simplifies form
+                  handling for static websites and frontend applications
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Eliminated the need to build custom form backends for websites
+                  and apps
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Enabled instant form submission handling through a single API
+                  endpoint
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Implemented real-time email notifications for new submissions
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Added webhook support for seamless integration with APIs,
+                  Slack, Discord, Zapier, and n8n
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Built spam protection using honeypot fields and rate limiting
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Developed a centralized dashboard for managing form
+                  submissions
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className={`bg-neutral-500 w-1 h-1 rounded-full`} />
+                <p className="text-sm text-neutral-500">
+                  Enabled CSV and JSON exports for easy data access and
+                  reporting
                 </p>
               </div>
             </div>
