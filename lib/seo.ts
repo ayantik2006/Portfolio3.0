@@ -53,9 +53,9 @@ export const KEYWORDS = [
 ];
 
 export const DEFAULT_OG_IMAGE = {
-  url: `${SITE_URL}/ayantik.png`,
-  width: 1200,
-  height: 630,
+  url: `${SITE_URL}/og-image.png`,
+  width: 1536,
+  height: 1024,
   alt: "Ayantik Sarkar — Full Stack Developer",
 };
 

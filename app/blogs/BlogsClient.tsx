@@ -41,6 +41,13 @@ export default function BlogsClient() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full mt-10">
           <Blog
+            href="/blogs/how-we-reduced-manual-data-entry-to-10-minutes"
+            theme={theme}
+            img="/blog2.png"
+            heading="How We Reduced Hours of Manual Data Entry to 10 Minutes Using Claude, Cloudinary, and MongoDB"
+            date="02.08.2026"
+          />
+          <Blog
             href="/blogs/what-one-year-frontend-dev-taught-me"
             theme={theme}
             img="/blog1.png"
