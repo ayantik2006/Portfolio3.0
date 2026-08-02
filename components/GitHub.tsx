@@ -21,7 +21,7 @@ function GitHub() {
       className={`${hanken.className} mt-10 flex flex-col gap-5 justify-center w-full calendar-wrapper p-2 sm:p-0`}
     >
       <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)] -mt-5" />
-      <h1 className="font-semibold">GitHub</h1>
+      <h2 className="font-semibold">GitHub</h2>
       <Suspense fallback={<GitHubContributionsFallback />}>
       <GitHubContributions
         contributions={contributions}

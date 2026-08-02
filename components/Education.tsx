@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import { Hanken_Grotesk } from "next/font/google";
+import Image from "next/image";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -14,19 +15,19 @@ function Education() {
       className={`${hanken.className} mt-10 flex flex-col gap-3 justify-center w-full p-2 sm:p-0`}
     >
       <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)] -mt-3" />
-      <h1 className="font-semibold">Education</h1>
+      <h2 className="font-semibold">Education</h2>
       <div className="flex items-cente gap-3">
         <div className={`p-2 w-fit h-fit border rounde shrink-0 ${theme == "dark" ? "bg-neutral-900 border-neutral-700" : ""}`}>
           <div
-            className={`flex items-center justify-center rounded-lg w-9 h-9 borde overflow-hidden ${theme == "dark" ? "bg-neutral-900" : "bg-neutral-100"}`}
+            className={`relative flex items-center justify-center rounded-lg w-9 h-9 borde overflow-hidden ${theme == "dark" ? "bg-neutral-900" : "bg-neutral-100"}`}
           >
-            <img src="/nitr-logo.png" alt="NIT Rourkela" width={32} height={32} className="object-contain" />
+            <Image src="/nitr-logo.png" alt="National Institute of Technology, Rourkela logo" unoptimized fill sizes="36px" className="object-contain p-1" />
           </div>
         </div>
         <div className="flex flex-col">
-            <h1>National Institute of Technology, Rourkela</h1>
-            <h2 className="text-sm text-neutral-500">B.Tech, Civil Engineering</h2>
-            <h3 className="text-sm text-neutral-500">2025-2029</h3>
+            <h3>National Institute of Technology, Rourkela</h3>
+            <p className="text-sm text-neutral-500">B.Tech, Civil Engineering</p>
+            <p className="text-sm text-neutral-500">2025-2029</p>
         </div>
       </div>
       {/* <div className="flex items-cente gap-3 mt-5">

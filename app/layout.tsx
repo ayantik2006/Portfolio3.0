@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -9,6 +9,21 @@ import ThemeToggle from "@/components/ThemeToggle";
 import BackButton from "@/components/BackButton";
 import ChatWidget from "@/components/ChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
+import JsonLd from "@/components/JsonLd";
+import {
+  AUTHOR_EMAIL,
+  DEFAULT_OG_IMAGE,
+  KEYWORDS,
+  PERSON_NAME,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TITLE_DEFAULT,
+  SITE_TITLE_TEMPLATE,
+  SITE_URL,
+  organizationJsonLd,
+  personJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +36,72 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ayantik Sarkar - Full Stack Developer",
-  description: "Building scalable web apps and UI systems using Next.js, React, and modern technologies.Creator of Pulse UI and Elimics and CTO at Hoardspace.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE_DEFAULT,
+    template: SITE_TITLE_TEMPLATE,
+  },
+  description: SITE_DESCRIPTION,
+  keywords: KEYWORDS,
+  authors: [{ name: PERSON_NAME, url: SITE_URL }],
+  creator: PERSON_NAME,
+  publisher: PERSON_NAME,
+  category: "technology",
+  applicationName: SITE_NAME,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  manifest: "/manifest.webmanifest",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    other: {
+      "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+        ? [process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION]
+        : [],
+      "yandex-verification": process.env.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION
+        ? [process.env.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION]
+        : [],
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_TITLE_DEFAULT,
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE_DEFAULT,
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE.url],
+    creator: "@ayantik2006",
+  },
+  other: {
+    "author-email": AUTHOR_EMAIL,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F9F9F9" },
+    { media: "(prefers-color-scheme: dark)", color: "#100F0F" },
+  ],
 };
 
 export default function RootLayout({
@@ -37,6 +116,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+        <JsonLd data={[personJsonLd(), websiteJsonLd(), organizationJsonLd()]} />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-CDDPV5XE5T`}
           strategy="afterInteractive"

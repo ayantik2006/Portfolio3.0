@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image";
 import { Hanken_Grotesk } from "next/font/google";
 import { ArrowUpRight } from "lucide-react";
 
@@ -45,7 +46,7 @@ function Projects() {
     <div
       className={`${hanken.className} mt-5 flex flex-col gap-3 justify-center w-full p-2 sm:p-0 `}
     >
-      <h1 className="font-semibold">Projects</h1>
+      <h2 className="font-semibold">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
         {projects.map((project) => (
           <a
@@ -59,11 +60,14 @@ function Projects() {
                 : "bg-white border-neutral-200"
             }`}
           >
-            <div className="w-full aspect-video overflow-hidden bg-neutral-900">
-              <img
+            <div className="relative w-full aspect-video overflow-hidden bg-neutral-900">
+              <Image
                 src={project.thumbnail}
-                alt={project.title}
-                className="w-full h-full object-cover"
+                alt={`${project.title} — project by Ayantik Sarkar`}
+                unoptimized
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
               />
             </div>
             <div className="flex flex-col gap-2 p-5 flex-1">

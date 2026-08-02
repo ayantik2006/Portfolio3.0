@@ -36,7 +36,7 @@ function Blogs() {
     <div
       className={`${hanken.className} mt-5 flex flex-col gap-3 justify-center w-full p-2 sm:p-0 `}
     >
-      <h1 className="font-semibold">Blogs</h1>
+      <h2 className="font-semibold">Blogs</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
         {blogs.map((blog) => (
           <Link
@@ -51,6 +51,7 @@ function Blogs() {
             <div className="w-full aspect-video overflow-hidden bg-neutral-900">
               <Image
                 src={blog.img}
+                unoptimized
                 height={300}
                 width={300}
                 alt={blog.heading}

@@ -20,7 +20,7 @@ function Stack() {
       {/* <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)] -mt-3" /> */}
       <div className="flex gap-3 items-center">
         {/* <MonitorCog size={22}/> */}
-        <h1 className="font-semibold">Stack</h1>
+        <h2 className="font-semibold">Stack</h2>
       </div>
       <div className="flex items-center gap-5 flex-wrap">
         <StackChip
@@ -45,6 +45,7 @@ function Stack() {
               }
               height={13}
               width={13}
+              unoptimized
               alt={"Motion"}
             />
           </div>
@@ -64,6 +65,7 @@ function Stack() {
               }
               height={13}
               width={13}
+              unoptimized
               alt={"ExpressJS"}
             />
           </div>

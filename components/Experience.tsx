@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import { Hanken_Grotesk } from "next/font/google";
 import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -27,17 +28,38 @@ const experiences = [
       "Partnered directly with founders to translate business requirements into a technical roadmap for the platform.",
     ],
   },
+  {
+    company: "Google Developer Students' Club, NIT Rourkela",
+    role: "Web Developer",
+    duration: "Dec 2025 – Present",
+    location: "NIT Rourkela",
+    logo: "/dsclogo.webp",
+    points: [
+      "Contributed as a Web Developer to the official Nitrutsav 2026 website, the annual techno-cultural fest of NIT Rourkela.",
+    ],
+  },
+  {
+    company: "WebWiz - The Web Dev Club of NITR",
+    role: "Web Developer",
+    duration: "Feb 2026 – Jul 2026",
+    location: "NIT Rourkela",
+    logo: "/webwiz-logo.jpg",
+    logoClassName: "p-0",
+    points: [
+      "Contributed as a Web Developer to the official HackOdisha 6 website.",
+    ],
+  },
 ];
 
 function Experience() {
   const { theme } = useTheme();
-  const [openIndex, setOpenIndex] = useState<number | null>(1);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <div
       className={`${hanken.className} mt-10 flex flex-col gap-3 justify-center w-full p-2 sm:p-0`}
     >
-      <h1 className="font-semibold">Experience</h1>
+      <h2 className="font-semibold">Experience</h2>
       <div className="flex flex-col gap-3">
         {experiences.map((exp, index) => {
           const isOpen = openIndex === index;
@@ -55,21 +77,22 @@ function Experience() {
                   className={`p-2 w-fit h-fit border rounde shrink-0 ${theme === "dark" ? "bg-neutral-900 border-neutral-700" : ""}`}
                 >
                   <div
-                    className={`flex items-center justify-center rounded-lg w-9 h-9 borde overflow-hidden ${theme === "dark" ? "bg-neutral-900" : "bg-neutral-100"}`}
+                    className={`relative flex items-center justify-center rounded-lg w-9 h-9 borde overflow-hidden ${theme === "dark" ? "bg-neutral-900" : "bg-neutral-100"}`}
                   >
-                    <img
+                    <Image
                       src={exp.logo}
-                      alt={exp.company}
-                      width={22}
-                      height={22}
-                      className="object-contain"
+                      alt={`${exp.company} logo`}
+                      unoptimized
+                      fill
+                      sizes="36px"
+                      className={`object-contain ${exp.logoClassName ?? "p-1.5"}`}
                     />
                   </div>
                 </div>
                 <div className="flex flex-col flex-1 min-w-0 gap-0.5">
-                  <h2 className="text-sm font-semibold truncate">
+                  <h3 className="text-sm font-semibold truncate">
                     {exp.company}
-                  </h2>
+                  </h3>
                   <p className="text-sm text-neutral-500 truncate">
                     {exp.role}
                   </p>

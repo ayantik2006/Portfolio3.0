@@ -92,34 +92,39 @@ function ChatWidget() {
       <AnimatePresence>
         {isChatOpen && (
           <motion.div
-            className="w-85 h-130 bg-neutral-50 dark:bg-neutral-900 rounded-xl flex flex-col p-5 shadow-[0px_8px_30px_rgba(0,0,0,0.12)] dark:shadow-[0px_8px_30px_rgba(0,0,0,0.5)] border border-neutral-200 dark:border-white/10"
-            initial={{ scale: 0.8, opacity: 0, filter: "blur(10px)" }}
+            className="w-85 h-130 origin-bottom-right bg-neutral-50 dark:bg-neutral-900 flex flex-col p-5 shadow-[0px_8px_30px_rgba(0,0,0,0.12)] dark:shadow-[0px_8px_30px_rgba(0,0,0,0.5)] border border-neutral-200 dark:border-white/10"
+            initial={{ scale: 0.15, opacity: 0, x: 16, y: 16 }}
             exit={{
-              scale: 0.8,
+              scale: 0.15,
               opacity: 0,
-              filter: "blur(10px)",
+              x: 16,
+              y: 16,
             }}
             animate={{
               scale: 1,
               opacity: 1,
-              filter: "blur(0px)",
+              x: 0,
+              y: 0,
             }}
             transition={{
-              duration: 0.2,
+              type: "spring",
+              stiffness: 300,
+              damping: 28,
             }}
           >
             <div className="flex gap-2 items-start pb-4 border-b border-neutral-200 dark:border-white/10">
               <div className="w-9 h-9 relative shrink-0">
                 <Image
                   src={"/favicon.png"}
+                  unoptimized
                   width={100}
                   height={100}
                   loading="eager"
                   alt="Ayantik Sarkar"
-                  className="rounded-full object-cover h-full w-full"
+                  className="object-cover h-full w-full"
                   draggable={false}
                 />
-                <div className="w-2.5 h-2.5 bg-green-500 rounded-full absolute bottom-0 right-0 border-2 border-neutral-50 dark:border-neutral-900" />
+                <div className="w-2.5 h-2.5 bg-green-500 absolute bottom-0 right-0 border-2 border-neutral-50 dark:border-neutral-900" />
               </div>
               <div className="flex flex-col flex-1">
                 <p className="text-black dark:text-white font-semibold text-sm">
@@ -170,7 +175,7 @@ function ChatWidget() {
                         key={index}
                         className="self-end max-w-[85%] flex flex-col items-end gap-1"
                       >
-                        <p className="bg-black dark:bg-white py-2 px-3 text-sm rounded-2xl rounded-tr-sm text-white dark:text-black wrap-break-word whitespace-pre-wrap">
+                        <p className="bg-black dark:bg-white py-2 px-3 text-sm text-white dark:text-black wrap-break-word whitespace-pre-wrap">
                           {msg.text}
                         </p>
                         <div className="flex items-center gap-1 pr-1">
@@ -212,7 +217,7 @@ function ChatWidget() {
             >
               <textarea
                 placeholder="Write a beautiful message to me :)"
-                className="w-full placeholder:text-sm placeholder:text-neutral-400 dark:placeholder:text-neutral-500 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-white/10 rounded-lg h-20 max-h-32 my-2 outline-none text-black dark:text-white selection:bg-black! selection:text-white! p-2 resize-none focus:ring-2 ring-neutral-300 dark:ring-neutral-600 duration-200"
+                className="w-full placeholder:text-sm placeholder:text-neutral-400 dark:placeholder:text-neutral-500 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-white/10 h-20 max-h-32 my-2 outline-none text-black dark:text-white selection:bg-black! selection:text-white! p-2 resize-none focus:ring-2 ring-neutral-300 dark:ring-neutral-600 duration-200"
                 ref={msgBoxRef}
                 name="message"
                 onChange={(e) => {
@@ -226,7 +231,7 @@ function ChatWidget() {
                 }}
               ></textarea>
               <button
-                className="text-white dark:text-black text-sm bg-black dark:bg-white py-2 rounded-md cursor-pointer duration-300 hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="text-white dark:text-black text-sm bg-black dark:bg-white py-2 cursor-pointer duration-300 hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 type="submit"
                 disabled={message.trim() === "" || status === "sending"}
               >
