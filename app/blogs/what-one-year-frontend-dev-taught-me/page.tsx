@@ -28,16 +28,16 @@ export default function Page() {
 
   return (
     <div
-      className={`min-h-screen items-center justify-center ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
+      className={`min-h-screen items-center justify-center pt-14 sm:pt-16 ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
     >
       <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl mx-auto ">
-        <Link
+        {/* <Link
           href={"/blogs"}
           className="w-full flex gap-1 items-center text-neutral-400 cursor-pointer hover:text-white duration-300"
         >
           <ArrowLeft size={16} />
           <p className="text-sm">Blogs</p>
-        </Link>
+        </Link> */}
         <h1
           className={`text-2xl ${hanken.className} font-semibold mr-auto mt-5`}
         >
@@ -47,8 +47,8 @@ export default function Page() {
         <h2 className="mr-auto mt-1 text-neutral-400">
           - Ayantik Sarkar &bull; 12.06.2026 &bull; <a href="https://medium.com/@ayantik.sarkar2020/what-1-year-of-frontend-development-taught-me-about-building-memorable-websites-fc8a9497987c?postPublishedType=initial" target="_blank">Medium</a>
         </h2>
-        <Scale className="w-[99%] my-6 z-90 h-1" />
-        <div className="rounded-lg h-full w-full p-3">
+        
+        <div className="rounded-lg h-full w-full p-3 mt-6">
           <Image
             src={"/blog1.png"}
             height={300}
@@ -469,7 +469,7 @@ export default function Page() {
           <br />
           <br />
         </p>
-        <Scale className="w-[99%] my-6 z-90 h-1" />
+        
         <Footer/>
       </div>
     </div>

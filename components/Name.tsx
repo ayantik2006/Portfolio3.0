@@ -17,11 +17,11 @@ function Name() {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="flex flex-col items-center sm:items-start mt-2 sm:mt-16 w-full">
+    <div className="flex flex-col items-start w-full min-w-0 flex-1 pb-3">
       <div className="flex flex-col">
-        <div className="flex gap-2 items-center flex-wrap justify-center sm:justify-start">
+        <div className="flex gap-2 items-center flex-wrap justify-start">
           <h1
-            className={`text-xl sm:text-2xl ${hanken.className} font-semibold text-center sm:text-left`}
+            className={`text-xl sm:text-2xl ${hanken.className} font-semibold text-left`}
           >
             Ayantik Sarkar
           </h1>
@@ -68,7 +68,7 @@ function Name() {
           className={`flex mt-2 w-full gap-4 text-sm ${hanken.className} text-[#ABABAD]`}
         >
           <TextFlip
-            words={["Full Stack Developer", "Design Engineer", "Figma to Code"]}
+            words={["Full Stack Developer", "Product Engineer", "Design Systems Engineer"]}
             className="font-mono"
             duration={1500}
           />

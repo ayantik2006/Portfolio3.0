@@ -167,6 +167,52 @@
 
   .chat-widget-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #d1d5db white;
+    scrollbar-color: #d1d5db transparent;
+  }
+
+  .dark .chat-widget-scrollbar::-webkit-scrollbar-thumb {
+    background: #404040;
+  }
+
+  .dark .chat-widget-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+  }
+
+  .dark .chat-widget-scrollbar {
+    scrollbar-color: #404040 transparent;
+  }
+
+  .dialog-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .dialog-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .dialog-scrollbar::-webkit-scrollbar-thumb {
+    background: #a3a3a3;
+    border-radius: 0;
+  }
+
+  .dialog-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #737373;
+  }
+
+  .dark .dialog-scrollbar::-webkit-scrollbar-thumb {
+    background: #404040;
+  }
+
+  .dark .dialog-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+  }
+
+  .dialog-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #a3a3a3 transparent;
+  }
+
+  .dark .dialog-scrollbar {
+    scrollbar-color: #404040 transparent;
   }
 }

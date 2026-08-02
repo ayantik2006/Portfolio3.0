@@ -2,6 +2,7 @@
 
 import { use } from "react"
 import { format } from "date-fns"
+import { Hanken_Grotesk } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 import { Spinner } from "@/components/ui/spinner"
@@ -19,6 +20,12 @@ import {
   ContributionGraphLegend,
   ContributionGraphTotalCount,
 } from "@/components/contribution-graph"
+
+const hanken = Hanken_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-hanken",
+})
 
 export function GitHubContributions({
   contributions,
@@ -54,7 +61,7 @@ export function GitHubContributions({
                 />
               </g>
             </TooltipTrigger>
-            <TooltipContent className="font-sans">
+            <TooltipContent className={hanken.className}>
               <p>
                 {activity.count} contribution{activity.count > 1 ? "s" : null}{" "}
                 on {format(new Date(activity.date), "dd.MM.yyyy")}

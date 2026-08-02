@@ -15,11 +15,12 @@ function Stack() {
   const { theme, setTheme } = useTheme();
   return (
     <div
-      className={`${hanken.className} mt-10 flex flex-col gap-3 items-cente justify-center w-full p-2 sm:p-0`}
+      className={`${hanken.className} mt-4 flex flex-col gap-3 items-cente justify-center w-full p-2 sm:p-0`}
     >
+      {/* <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)] -mt-3" /> */}
       <div className="flex gap-3 items-center">
         {/* <MonitorCog size={22}/> */}
-        <h1 className="">Stack</h1>
+        <h1 className="font-semibold">Stack</h1>
       </div>
       <div className="flex items-center gap-5 flex-wrap">
         <StackChip
@@ -79,6 +80,7 @@ function Stack() {
           <p className="text-sm cursor-default">{"GitHub"}</p>
         </div>
       </div>
+      {/* <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" /> */}
     </div>
   );
 }

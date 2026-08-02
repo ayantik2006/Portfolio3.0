@@ -2,6 +2,10 @@
 
 import Banner from "@/components/Banner";
 import Intro from "@/components/Intro";
+import QuickActions from "@/components/QuickActions";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
+import Blogs from "@/components/Blogs";
 import Name from "@/components/Name";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -11,7 +15,6 @@ import Stack from "@/components/Stack";
 import Education from "@/components/Education";
 import GitHub from "@/components/GitHub";
 import Footer from "@/components/Footer";
-import { Scale } from "@/components/Scale";
 import SpotifyWidget from "@/components/SpotifyWidget";
 
 const hanken = Hanken_Grotesk({
@@ -33,25 +36,27 @@ export default function Home() {
 
   return (
     <div
-      className={`min-h-screen mx-auto w-full overflow-x-hidden items-center justify-center relative ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"}`}
+      className={`min-h-screen mx-auto w-full overflow-x-hidden items-center justify-center relative pt-14 sm:pt-16 ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"}`}
     >
       <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 py-4 max-w-3xl mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-2 w-full">
+        <div className="relative flex flex-row items-end gap-5 w-full">
+          <div className="absolute top-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] border-t-2 border-dotted border-black/25 dark:border-white/15" />
+          <div className="absolute bottom-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] border-b-2 border-dotted border-black/25 dark:border-white/15" />
           <Banner />
           <Name />
         </div>
-        <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
+        <div className="w-screen h-6 mt-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
+        <QuickActions />
+        <div className="w-screen h-6 mt-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
         <Intro />
         <Socials />
-        <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
+        <Experience />
+        <Projects />
+        <Blogs />
         <Stack />
-        <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
         {/* <SpotifyWidget/> */}
-        {/* <Scale className="w-[99%] mx-2 z-90 h-2" /> */}
         <Education />
-        <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
         <GitHub />
-        <Scale className="w-[99%] mx-2 z-90 h-2 mt-4" />
         <Footer />
       </div>
     </div>

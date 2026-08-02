@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Hanken_Grotesk } from "next/font/google";
-import ColourfulText from "@/components/ui/colourful-text";
+import { ArrowUpRight } from "lucide-react";
 import { Scale } from "@/components/Scale";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function Page() {
 
   return (
     <div
-      className={`min-h-screen items-center justify-center ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
+      className={`min-h-screen items-center justify-center pt-14 sm:pt-16 ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
     >
       <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl mx-auto ">
         <h1
@@ -39,45 +39,60 @@ export default function Page() {
         <h2 className="mr-auto mt-1 text-neutral-400">
           Insights, ideas, and lessons from building real-world projects
         </h2>
-        <Scale className="w-[99%] my-6 z-90 h-1" />
-        <div className="flex flex-col gap-3 w-full">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full mt-10">
           <Blog
+            href="/blogs/what-one-year-frontend-dev-taught-me"
+            theme={theme}
             img="/blog1.png"
             heading="What 1 Year of Frontend Development Taught Me About Building Memorable Websites"
             date="12.06.2026"
           />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
 }
 
 const Blog = ({
+  href,
+  theme,
   img,
   heading,
   date,
 }: {
+  href: string;
+  theme: string | undefined;
   img: string;
   heading: string;
   date: string;
 }) => {
   return (
-    <Link href={"/blogs/what-one-year-frontend-dev-taught-me"} className="p-1 border-3 rounded-lg">
-      <div className="flex flex-col gap-6 p-6 border-2 rounded-md dark:bg-neutral-900 cursor-pointer dark:hover:bg-neutral-900/20 duration-300 bg-neutral-100 hover:bg-neutral-200/30">
-        <div className="rounded-lg h-full w-full">
-          <Image
-            src={img}
-            height={300}
-            width={300}
-            alt="blog1"
-            className="w-full rounded-lg"
-          />
+    <Link
+      href={href}
+      className={`flex flex-col border overflow-hidden ${
+        theme === "dark"
+          ? "bg-neutral-950 border-neutral-800"
+          : "bg-white border-neutral-200"
+      }`}
+    >
+      <div className="w-full aspect-video overflow-hidden bg-neutral-900">
+        <Image
+          src={img}
+          height={300}
+          width={300}
+          alt={heading}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="flex flex-col gap-2 p-5 flex-1">
+        <h3 className="font-semibold text-base">{heading}</h3>
+        <p className="text-sm text-neutral-500 flex-1">{date}</p>
+        <div className="flex items-center gap-1 text-sm mt-3 self-end hover:underline">
+          Read
+          <ArrowUpRight size={14} />
         </div>
-        <div className="">
-          <h1 className="font-semibold text-lg">{heading}</h1>
-        </div>
-        <p className="text-neutral-400 -mt-5">{date}</p>
       </div>
     </Link>
   );

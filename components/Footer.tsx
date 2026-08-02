@@ -14,10 +14,10 @@ const hanken = Hanken_Grotesk({
 function Footer() {
   return (
     <div
-      className={`${hanken.className} flex flex-col items-cente justify-center mt-20 w-full p-2 sm:p-0`}
+      className={`${hanken.className} flex flex-col items-cente justify-center mt-20 w-full p-2 sm:p-0 mb-10`}
     >
-      <Quote/>
-      <div>
+      <Quote />
+      {/* <div>
         <p className="text-neutral-500">
           Inspired from{" "}
           <a
@@ -38,23 +38,29 @@ function Footer() {
           <br />
           Built by <a href="" className="underline">Ayantik Sarkar</a>
         </p>
-      </div>
-      <div className="flex gap-2 mt-2">
-        <Link href={"https://github.com/ayantik2006"} target="_blank">
-          <FaGithub className="text-neutral-500" />
-        </Link>
-        <Link href={"https://www.linkedin.com/in/ayantiksarkar/"} target="_blank">
-          <FaLinkedin className="text-neutral-500" />
-        </Link>
-        <Link href={"https://x.com/ayantik2006"} target="_blank">
-          <FaXTwitter className="text-neutral-500" />
-        </Link>
-        <Link href={"mailto:ayantik.sarkar2020@gmail.com"} target="_blank">
-          <Mail className="text-neutral-500" size={16} />
-        </Link>
-        <Link href={"tel:+91 7595882545"} target="_blank">
-          <Phone className="text-neutral-500" size={16} />
-        </Link>
+      </div> */}
+      <div className="w-full flex items-center justify-between">
+        <p>Let&apos;s Connect</p>
+        <div className="flex gap-2 mt-2">
+          <Link href={"https://github.com/ayantik2006"} target="_blank">
+            <FaGithub className="text-neutral-500" />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/ayantiksarkar/"}
+            target="_blank"
+          >
+            <FaLinkedin className="text-neutral-500" />
+          </Link>
+          <Link href={"https://x.com/ayantik2006"} target="_blank">
+            <FaXTwitter className="text-neutral-500" />
+          </Link>
+          <Link href={"mailto:ayantik.sarkar2020@gmail.com"} target="_blank">
+            <Mail className="text-neutral-500" size={16} />
+          </Link>
+          <Link href={"tel:+91 7595882545"} target="_blank">
+            <Phone className="text-neutral-500" size={16} />
+          </Link>
+        </div>
       </div>
     </div>
   );

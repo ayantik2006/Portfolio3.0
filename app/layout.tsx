@@ -5,7 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Script from "next/script";
 import LayoutScales from "@/components/LayoutScales";
-import Navbar from "@/components/Navbar";
+import ThemeToggle from "@/components/ThemeToggle";
+import BackButton from "@/components/BackButton";
 import ChatWidget from "@/components/ChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -65,10 +66,12 @@ export default function RootLayout({
         >
           <TooltipProvider>
             <LayoutScales />
-            <Navbar />
+            <ThemeToggle />
+            <BackButton />
             <ChatWidget/>
             <ScrollToTop/>
-            <div className="pt-16">{children}</div>
+            <div>{children}</div>
+            <div className="pointer-events-none fixed bottom-0 left-0 right-0 z-40 h-24 bg-linear-to-t from-[#F9F9F9] dark:from-[#100F0F] to-transparent" />
           </TooltipProvider>
         </ThemeProvider>
       </body>

@@ -25,7 +25,7 @@ export default function Page() {
 
   return (
     <div
-      className={`min-h-screen items-center justify-center ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
+      className={`min-h-screen items-center justify-center pt-14 sm:pt-16 ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
     >
       <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl mx-auto">
         <h1
