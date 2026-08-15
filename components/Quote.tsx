@@ -6,7 +6,7 @@ function Quote() {
   const [isHindi, setIsHindi] = useState(false);
 
   return (
-    <div className="relative max-w-full w-full mb-10 overflow-hidden border border-black/10 dark:border-white/10 bg-black/[0.015] dark:bg-white/[0.02] p-6 sm:p-8">
+    <div className="relative max-w-full w-full mb-10 overflow-hidden border border-black/10 dark:border-white/10 bg-black/[0.015] dark:bg-white/[0.02] p-5 sm:p-8 md:p-10">
       <QuoteIcon
         className="absolute top-4 left-4 text-black/5 dark:text-white/5 pointer-events-none"
         size={64}
@@ -31,7 +31,7 @@ function Quote() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             exit={{ opacity: 0, filter: "blur(4px)" }}
             transition={{ duration: 0.35 }}
-            className="text-lg font-semibold italic font-mono leading-relaxed text-neutral-600 dark:text-neutral-300 pr-6"
+            className="text-base sm:text-lg md:text-xl font-semibold italic font-mono leading-relaxed text-neutral-600 dark:text-neutral-300 pr-6"
           >
             {!isHindi
               ? "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action."

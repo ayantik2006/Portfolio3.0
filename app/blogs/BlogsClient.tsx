@@ -41,6 +41,13 @@ export default function BlogsClient() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full mt-10">
           <Blog
+            href="/blogs/the-mongodb-query-that-broke-hoardspaces-explore-page"
+            theme={theme}
+            img="/blog3.webp"
+            heading="The MongoDB Query That Broke HoardSpace's Explore Page"
+            date="15.08.2026"
+          />
+          <Blog
             href="/blogs/how-we-reduced-manual-data-entry-to-10-minutes"
             theme={theme}
             img="/blog2.png"
