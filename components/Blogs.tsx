@@ -21,6 +21,12 @@ type Blog = {
 
 const blogs: Blog[] = [
   {
+    href: "/blogs/the-mongodb-query-that-broke-hoardspaces-explore-page",
+    img: "/blog3.webp",
+    heading: "The MongoDB Query That Broke HoardSpace's Explore Page",
+    date: "15.08.2026",
+  },
+  {
     href: "/blogs/what-one-year-frontend-dev-taught-me",
     img: "/blog1.png",
     heading:

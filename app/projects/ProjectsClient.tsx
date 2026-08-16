@@ -94,6 +94,23 @@ const projects: Project[] = [
       "Enabled CSV and JSON exports for easy data access and reporting",
     ],
   },
+  {
+    title: "Mini JWT",
+    link: "http://npmjs.com/package/@ayantik2006/mini-jwt",
+    thumbnail: "/mini-jwt.png",
+    summary:
+      "MiniJWT — a JWT-like authentication system built from scratch using Node.js native cryptographic APIs.",
+    bullets: [
+      "Built MiniJWT — a JWT-like authentication system from scratch",
+      "Implemented Base64URL encoding and decoding for token serialization",
+      "Implemented HMAC-SHA256 based token signing and verification",
+      "Designed tamper detection by validating cryptographic signatures",
+      "Added token expiration with configurable time units",
+      "Implemented algorithm validation and malformed-token handling",
+      "Built the authentication flow using Node.js native cryptographic APIs",
+      "Explored timing-safe signature comparison and authentication security",
+    ],
+  },
 ];
 
 function ProjectCard({
