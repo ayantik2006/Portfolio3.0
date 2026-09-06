@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaRegMoon } from "react-icons/fa";
 import { GoSun } from "react-icons/go";
-import { FaRegMoon } from "react-icons/fa";
+import { Search } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Hanken_Grotesk } from "next/font/google";
 import { useEffect, useState } from "react";
@@ -20,75 +21,123 @@ const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
 });
 
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blogs", label: "Blog" },
+  { href: "/resume", label: "Resume" },
+];
+
+function isActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 function Navbar() {
+  const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isMac, setIsMac] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
+    setIsMac(/Mac|iP(hone|ad|od)/.test(navigator.platform));
   }, []);
+
+  const openPalette = () =>
+    window.dispatchEvent(new Event("open-command-palette"));
 
   return (
     <div
-      className={`${hanken.className} w-full flex items-center justify-center transition-all z-[130] duration-300 fixed top-0 left-0 right-0 backdrop-blur-lg`}
+      className={`${hanken.className} fixed inset-x-0 top-0 z-[130] w-full border-b border-black/5 backdrop-blur-lg dark:border-white/5`}
     >
-      <div className="w-full flex items-center justify-between px-4 sm:px-6 py-3 max-w-3xl gap-3">
-        <div className="flex items-center gap-4 sm:gap-8 text-xs sm:text-sm text-neutral-400 font-semibold flex-wrap">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/projects"}>Projects</Link>
-          <Link href={"/blogs"}>Blog</Link>
-          <Link href={"/resume"}>Resume</Link>
-        </div>
-        <div className="flex items-center shrink-0">
+      <div className="mx-auto flex w-full max-w-3xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+        <nav className="flex flex-wrap items-center gap-4 text-xs font-semibold sm:gap-7 sm:text-sm">
+          {links.map(({ href, label }) => {
+            const active = isActive(pathname, href);
+            return (
+              <Link
+                key={href}
+                href={href}
+                aria-current={active ? "page" : undefined}
+                className={`relative transition-colors duration-200 ${
+                  active
+                    ? "text-neutral-900 dark:text-neutral-100"
+                    : "text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
+                }`}
+              >
+                {label}
+                {active && (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute -bottom-1 left-0 right-0 h-px bg-neutral-900 dark:bg-neutral-100"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className="flex shrink-0 items-center gap-1 text-neutral-500 dark:text-neutral-400">
+          <button
+            type="button"
+            onClick={openPalette}
+            aria-label="Open command palette"
+            className="group flex items-center gap-2 rounded border border-black/10 py-1.5 pl-2 pr-1.5 text-xs text-neutral-400 transition-colors hover:border-black/20 hover:text-neutral-700 dark:border-white/10 dark:hover:border-white/20 dark:hover:text-neutral-200"
+          >
+            <Search className="size-3.5" />
+            <span className="hidden sm:inline">Search</span>
+            <kbd className="rounded bg-black/5 px-1.5 py-0.5 font-mono text-[10px] leading-none dark:bg-white/10">
+              {mounted ? (isMac ? "⌘K" : "Ctrl K") : "⌘K"}
+            </kbd>
+          </button>
+
           <Tooltip>
             <TooltipTrigger asChild>
-              <button
-                className="hover:bg-neutral-100 dark:hover:bg-neutral-900 duration-300 px-3 py-2 rounded"
-                onClick={() => {
-                  window.open("https://github.com/ayantik2006", "_blank");
-                }}
+              <a
+                href="https://github.com/ayantik2006"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded px-2.5 py-2 duration-300 hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-900 dark:hover:text-neutral-100"
               >
                 <FaGithub />
-              </button>
+              </a>
             </TooltipTrigger>
             <TooltipContent className="z-1000">
-              <p className={`font-semibold ${hanken.className}`}>
-                Visit GitHub
-              </p>
+              <p className={`font-semibold ${hanken.className}`}>Visit GitHub</p>
             </TooltipContent>
           </Tooltip>
+
           <Tooltip>
             <TooltipTrigger asChild>
               <button
-                className="hover:bg-neutral-100 dark:hover:bg-neutral-900 duration-300 px-3 py-2 rounded"
-                onClick={() => {
-                  setTheme((prev) => {
-                    return prev === "dark" ? "light" : "dark";
-                  });
-                }}
+                aria-label="Toggle theme"
+                className="rounded px-2.5 py-2 duration-300 hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-900 dark:hover:text-neutral-100"
+                onClick={() =>
+                  setTheme((prev) => (prev === "dark" ? "light" : "dark"))
+                }
               >
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                   {mounted && theme === "dark" ? (
-                    <motion.div
+                    <motion.span
                       key="moon"
-                      // initial={{ opacity: 1, filter: "blur(0px)", scale: 0.8 }}
-                      // animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-                      exit={{ opacity: 0, filter: "blur(0px)", scale: 0 }}
+                      className="block"
+                      exit={{ opacity: 0, scale: 0 }}
                       transition={{ duration: 0.2 }}
                     >
                       <FaRegMoon />
-                    </motion.div>
+                    </motion.span>
                   ) : (
-                    <motion.div
+                    <motion.span
                       key="sun"
-                      // initial={{ opacity: 1, filter: "blur(0px)", scale: 0.8 }}
-                      // animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-                      exit={{ opacity: 0, filter: "blur(0px)", scale: 0 }}
+                      className="block"
+                      exit={{ opacity: 0, scale: 0 }}
                       transition={{ duration: 0.2 }}
                     >
                       <GoSun />
-                    </motion.div>
+                    </motion.span>
                   )}
                 </AnimatePresence>
               </button>

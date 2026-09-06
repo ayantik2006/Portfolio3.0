@@ -1,0 +1,15 @@
+# robots.txt — the internet's most-read poetry
+#
+#     "i am just a portfolio,
+#      standing in front of a crawler,
+#      asking it to index me."
+#
+# psst — there's a machine-readable version of me at /api/me
+# and if you curl the homepage, you get a business card.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://www.ayantiksarkar.com/sitemap.xml
+Host: https://www.ayantiksarkar.com

@@ -5,8 +5,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Script from "next/script";
 import LayoutScales from "@/components/LayoutScales";
-import ThemeToggle from "@/components/ThemeToggle";
-import BackButton from "@/components/BackButton";
+import Navbar from "@/components/Navbar";
+import CommandPalette from "@/components/CommandPalette";
+import ConsoleEasterEgg from "@/components/ConsoleEasterEgg";
+import KonamiCode from "@/components/KonamiCode";
 import ChatWidget from "@/components/ChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import JsonLd from "@/components/JsonLd";
@@ -150,8 +152,10 @@ export default function RootLayout({
         >
           <TooltipProvider>
             <LayoutScales />
-            <ThemeToggle />
-            <BackButton />
+            <Navbar />
+            <CommandPalette />
+            <ConsoleEasterEgg />
+            <KonamiCode />
             <ChatWidget/>
             <ScrollToTop/>
             <div>{children}</div>

@@ -6,7 +6,7 @@ function Banner() {
       <div className="relative w-fit shrink-0">
         <div className="relative w-24 h-24 sm:w-32 sm:h-32 border-l-2 border-r-2 border-dotted border-black/25 dark:border-white/15">
           <Image
-            src={"/profile-pic.jpg"}
+            src={"/dp.png"}
             unoptimized
             fill
             sizes="(min-width: 640px) 128px, 96px"
