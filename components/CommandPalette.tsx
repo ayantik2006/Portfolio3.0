@@ -19,6 +19,7 @@ import {
   NotebookPen,
   Search,
   SunMoon,
+  Terminal,
   UserRound,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -170,6 +171,17 @@ const ACTIONS: Action[] = [
     icon: <SunMoon className={iconClass} />,
     perform: ({ toggleTheme }) => toggleTheme(),
     keepOpen: true,
+  },
+  {
+    id: "act-machine",
+    label: "Machine view",
+    group: "Actions",
+    keywords: "json terminal data developer raw source",
+    icon: <Terminal className={iconClass} />,
+    perform: () =>
+      window.dispatchEvent(
+        new CustomEvent("set-site-mode", { detail: "machine" })
+      ),
   },
   {
     id: "act-github",

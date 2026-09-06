@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import CommandPalette from "@/components/CommandPalette";
 import ConsoleEasterEgg from "@/components/ConsoleEasterEgg";
 import KonamiCode from "@/components/KonamiCode";
+import SiteMode from "@/components/SiteMode";
 import ChatWidget from "@/components/ChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import JsonLd from "@/components/JsonLd";
@@ -156,6 +157,7 @@ export default function RootLayout({
             <CommandPalette />
             <ConsoleEasterEgg />
             <KonamiCode />
+            <SiteMode />
             <ChatWidget/>
             <ScrollToTop/>
             <div>{children}</div>

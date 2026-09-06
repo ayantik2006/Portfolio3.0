@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: "Geist", system-ui, -apple-system, sans-serif; }
+    a { color: #d4d4d4; } a:hover { color: #fafafa; }
+    .mono { font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</helmet>
+
+<div style="width: 1200px; height: 627px; box-sizing: border-box; background: #0a0a0a; color: #fafafa; position: relative; overflow: hidden; padding: 64px 72px; display: flex; flex-direction: column; justify-content: space-between;">
+
+  <!-- subtle dot grid, top-right -->
+  <div style="position: absolute; top: 0; right: 0; width: 520px; height: 520px; background-image: radial-gradient(#262626 1.4px, transparent 1.4px); background-size: 26px 26px; -webkit-mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 70%); mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 70%); pointer-events: none;"></div>
+
+  <!-- top row -->
+  <div style="display: flex; align-items: center; justify-content: space-between; position: relative;">
+    <div class="mono" style="font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3a3a3;">ayantik sarkar</div>
+    <div class="mono" style="font-size: 13px; letter-spacing: 0.1em; color: #737373; border: 1px solid #262626; border-radius: 999px; padding: 6px 14px;">changelog</div>
+  </div>
+
+  <!-- headline block -->
+  <div style="position: relative;">
+    <div class="mono" style="font-size: 14px; letter-spacing: 0.1em; color: #737373; margin-bottom: 18px;">// weekend build</div>
+    <h1 style="margin: 0; font-size: 68px; line-height: 1.05; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; max-width: 900px;">
+      Gave the portfolio a<br>fresh coat of paint.
+    </h1>
+  </div>
+
+  <!-- feature list -->
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 48px; position: relative; max-width: 940px;">
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px; color: #d4d4d4;">
+      <span class="mono" style="color: #525252; font-size: 14px;">01</span> ⌘K command palette
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px; color: #d4d4d4;">
+      <span class="mono" style="color: #525252; font-size: 14px;">02</span> Live &ldquo;Now Playing&rdquo; via Spotify
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px; color: #d4d4d4;">
+      <span class="mono" style="color: #525252; font-size: 14px;">03</span> Animated isometric initials
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px; color: #d4d4d4;">
+      <span class="mono" style="color: #525252; font-size: 14px;">04</span> Dot-grid cursor spotlight
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px; color: #d4d4d4;">
+      <span class="mono" style="color: #525252; font-size: 14px;">05</span> Redesigned navbar &amp; stack
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px; color: #d4d4d4;">
+      <span class="mono" style="color: #525252; font-size: 14px;">06</span> A few hidden easter eggs
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="display: flex; align-items: center; justify-content: space-between; position: relative; border-top: 1px solid #1f1f1f; padding-top: 20px;">
+    <div class="mono" style="font-size: 15px; color: #a3a3a3;">[YOUR-PORTFOLIO-URL]</div>
+    <div class="mono" style="font-size: 13px; color: #525252;">Next.js · TypeScript</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
