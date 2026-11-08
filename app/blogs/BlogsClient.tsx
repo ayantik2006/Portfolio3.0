@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -30,38 +31,57 @@ export default function BlogsClient() {
       className={`min-h-screen items-center justify-center pt-14 sm:pt-16 ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
     >
       <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl mx-auto ">
-        <h1
-          className={`text-2xl ${hanken.className} font-semibold mr-auto mt-5`}
-        >
-          Blogs by Ayantik Sarkar
-        </h1>
-        <h2 className="mr-auto mt-1 text-neutral-400 font-normal text-base">
-          Insights, ideas, and lessons from building real-world projects
-        </h2>
+        <Reveal className="mr-auto mt-5">
+          <h1 className={`text-2xl ${hanken.className} font-semibold`}>
+            Blogs by Ayantik Sarkar
+          </h1>
+          <h2 className="mt-1 text-neutral-400 font-normal text-base">
+            Insights, ideas, and lessons from building real-world projects
+          </h2>
+        </Reveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full mt-10">
-          <Blog
+          <Reveal delay={0.0} scale={0.96}>
+  <Blog
             href="/blogs/the-mongodb-query-that-broke-hoardspaces-explore-page"
             theme={theme}
             img="/blog3.webp"
             heading="The MongoDB Query That Broke HoardSpace's Explore Page"
             date="15.08.2026"
           />
-          <Blog
+          </Reveal>
+          <Reveal delay={0.08} scale={0.96}>
+  <Blog
             href="/blogs/how-we-reduced-manual-data-entry-to-10-minutes"
             theme={theme}
             img="/blog2.png"
             heading="How We Reduced Hours of Manual Data Entry to 10 Minutes Using Claude, Cloudinary, and MongoDB"
             date="02.08.2026"
           />
-          <Blog
+          </Reveal>
+          <Reveal delay={0.0} scale={0.96}>
+  <Blog
             href="/blogs/what-one-year-frontend-dev-taught-me"
             theme={theme}
             img="/blog1.png"
             heading="What 1 Year of Frontend Development Taught Me About Building Memorable Websites"
             date="12.06.2026"
           />
+          </Reveal>
         </div>
+        <Reveal className="w-full mt-5" delay={0.1}>
+          <a
+            href="https://medium.com/@ayantik.sarkar2020"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center justify-center gap-1 text-sm w-full border py-2.5 hover:underline ${
+              theme === "dark" ? "border-neutral-800" : "border-neutral-200"
+            }`}
+          >
+            Read all my stories on Medium
+            <ArrowUpRight size={14} />
+          </a>
+        </Reveal>
         <Footer />
       </div>
     </div>
@@ -84,7 +104,7 @@ const Blog = ({
   return (
     <Link
       href={href}
-      className={`flex flex-col border overflow-hidden ${
+      className={`group h-full flex flex-col border overflow-hidden transition-colors duration-300 hover:border-neutral-500 ${
         theme === "dark"
           ? "bg-neutral-950 border-neutral-800"
           : "bg-white border-neutral-200"
@@ -97,7 +117,7 @@ const Blog = ({
           height={300}
           width={300}
           alt={heading}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:blur-[1px]"
         />
       </div>
       <div className="flex flex-col gap-2 p-5 flex-1">

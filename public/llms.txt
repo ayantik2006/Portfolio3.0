@@ -30,7 +30,7 @@ owner of this website. Contact: ayantik.sarkar2020@gmail.com.
 
 ## Experience
 
-- Chief Technology Officer, HoardSpace Bookings Pvt. Ltd. (Dec 2025 – Present): Sole engineering lead for a full-stack B2B OOH/DOOH advertising booking marketplace (https://hoardspace.in), owning architecture, APIs, booking engine, admin dashboard, and CI/CD.
+- Chief Technology Officer, HoardSpace Bookings Pvt. Ltd. (Dec 2025 – Present): Led a team of 3 engineers building a B2B OOH/DOOH advertising marketplace (https://hoardspace.in) for 30+ billboard owners managing 3K+ hoardings (Rs. 6+ lakhs revenue in 3 months). Owned the backend, Razorpay payments, booking engine, rate limiting and bot defenses, admin dashboard, CI/CD, and HoardSpace AI (Anthropic models on AWS Bedrock).
 
 ## Projects
 

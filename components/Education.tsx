@@ -14,7 +14,7 @@ function Education() {
     <div
       className={`${hanken.className} mt-10 flex flex-col gap-3 justify-center w-full p-2 sm:p-0`}
     >
-      <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)] -mt-3" />
+      <div className="w-screen h-0 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15 -mt-3" />
       <h2 className="font-semibold">Education</h2>
       <div className="flex items-cente gap-3">
         <div className={`p-2 w-fit h-fit border rounde shrink-0 ${theme == "dark" ? "bg-neutral-900 border-neutral-700" : ""}`}>
@@ -58,7 +58,6 @@ function Education() {
             <h3 className="text-sm text-neutral-500">2012-2023</h3>
         </div>
       </div> */}
-      {/* <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" /> */}
     </div>
   );
 }

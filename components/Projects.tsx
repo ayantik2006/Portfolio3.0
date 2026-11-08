@@ -22,20 +22,19 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Elimics - Smart Link Analytics & URL Shortener",
-    link: "https://elimics.com",
+    title: "Threadpool - AI Agent Governance",
+    link: "https://threadpool.in",
     status: "ongoing",
-    thumbnail: "/elimics-thumbnail.png",
+    thumbnail: "/threadpool-thumbnail.png",
     summary:
-      "A smart link intelligence platform turning static links into trackable, insight-driven experiences with real-time analytics.",
+      "An agent governance system to register, monitor, and audit AI agents, with RBAC, policy enforcement and circuit breakers.",
   },
   {
-    title: "FormAS - Modern Form Backend for Developers",
-    link: "https://formas.space",
-    status: "ongoing",
-    thumbnail: "/formas.jpg",
+    title: "Keel - Secrets Manager",
+    link: "https://keel.hoardspace.in",
+    thumbnail: "/keel-thumbnail.png",
     summary:
-      "A Form Backend as a Service that simplifies form handling for static websites and frontend applications.",
+      "An Infisical-inspired secrets manager, used internally at HoardSpace, to replace insecure .env sharing.",
   },
 ];
 
@@ -63,7 +62,7 @@ function Projects() {
             <div className="relative w-full aspect-video overflow-hidden bg-neutral-900">
               <Image
                 src={project.thumbnail}
-                alt={`${project.title} — project by Ayantik Sarkar`}
+                alt={`${project.title} - project by Ayantik Sarkar`}
                 unoptimized
                 fill
                 sizes="(min-width: 640px) 50vw, 100vw"
@@ -95,7 +94,7 @@ function Projects() {
         More projects
         <ArrowUpRight size={14} />
       </Link>
-      <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
+      <div className="w-screen h-0 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15" />
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function KonamiCode() {
           idx = 0;
           setUnlocked(true);
           console.log(
-            "%c🕹  KONAMI — cheat mode engaged",
+            "%c🕹  KONAMI - cheat mode engaged",
             "color:#22c55e;font-weight:700;font-size:12px;"
           );
         }

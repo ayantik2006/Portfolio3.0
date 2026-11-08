@@ -21,11 +21,11 @@ const experiences = [
     location: "Rourkela",
     logo: "/hoardspace-logo.png",
     points: [
-      "Owned all technical decisions as sole engineering lead for a full-stack booking marketplace, architecting the system from the ground up across frontend, backend, and infrastructure.",
-      "Designed and shipped RESTful APIs and a scalable backend architecture supporting 25+ vendors (2.5k+ hoardings) for core booking and payment workflows.",
-      "Built and deployed production features end-to-end - authentication, booking engine, admin dashboard - reducing manual operations overhead.",
-      "Established CI/CD and engineering workflows, cutting deployment time and improving release reliability.",
-      "Partnered directly with founders to translate business requirements into a technical roadmap for the platform.",
+      "Led a team of 3 engineers building HoardSpace, an outdoor advertising marketplace for 30+ billboard owners managing 3K+ hoardings, which generated Rs. 6+ lakhs in revenue within 3 months of marketing.",
+      "Designed per-IP rate limiting (Upstash Redis, in-memory fallback), a honeypot banning scrapers for 24h without blocking Google's crawlers, and prompt-injection defenses that isolate untrusted page context in AI chat.",
+      "Architected the core backend: RESTful APIs, Razorpay payments, authentication, and the booking engine.",
+      "Set up GitHub CI/CD and built a role-based admin dashboard for inventory and booking management.",
+      "Developed HoardSpace AI, a campaign planning assistant (Anthropic models on AWS Bedrock) that recommends ad locations and estimates campaign cost and reach from budget, audience, location, and goals.",
     ],
   },
   {
@@ -141,7 +141,7 @@ function Experience() {
           );
         })}
       </div>
-      <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
+      <div className="w-screen h-0 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15" />
     </div>
   );
 }

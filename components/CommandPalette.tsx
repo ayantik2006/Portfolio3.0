@@ -24,9 +24,12 @@ import {
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Geist } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 
-const geist = Geist({ subsets: ["latin"] });
+const hanken = Hanken_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
 
 const EMAIL = "ayantik.sarkar2020@gmail.com";
 const GITHUB = "https://github.com/ayantik2006";
@@ -323,7 +326,7 @@ function CommandPalette() {
             e.preventDefault();
             inputRef.current?.focus();
           }}
-          className={`${geist.className} fixed left-1/2 top-[16vh] z-201 w-[92vw] max-w-lg -translate-x-1/2 overflow-hidden rounded-xl border border-neutral-200 bg-white/95 shadow-2xl backdrop-blur-xl data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 dark:border-neutral-800 dark:bg-[#100F0F]/95`}
+          className={`${hanken.className} fixed left-1/2 top-[16vh] z-201 w-[92vw] max-w-lg -translate-x-1/2 overflow-hidden rounded-xl border border-neutral-200 bg-white/95 shadow-2xl backdrop-blur-xl data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 dark:border-neutral-800 dark:bg-[#100F0F]/95`}
         >
           <DialogPrimitive.Title className="sr-only">
             Command palette
@@ -343,7 +346,7 @@ function CommandPalette() {
               }}
               onKeyDown={onInputKeyDown}
               placeholder="Jump to a section, page, or action…"
-              className="h-12 w-full bg-transparent text-sm text-neutral-900 outline-none placeholder:text-neutral-400 dark:text-neutral-100"
+              className="h-12 w-full bg-transparent text-sm font-medium text-neutral-900 outline-none placeholder:text-neutral-400 dark:text-neutral-100"
               aria-label="Command palette search"
             />
             <kbd className="hidden shrink-0 rounded border border-neutral-200 px-1.5 py-0.5 font-mono text-[10px] text-neutral-400 sm:block dark:border-neutral-700">
@@ -378,7 +381,7 @@ function CommandPalette() {
                     data-index={index}
                     onMouseEnter={() => setActive(index)}
                     onClick={() => run(action)}
-                    className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-sm transition-colors ${
+                    className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-sm font-medium transition-colors ${
                       isActive
                         ? "bg-neutral-100 text-neutral-900 dark:bg-neutral-800/80 dark:text-neutral-50"
                         : "text-neutral-700 dark:text-neutral-300"
@@ -404,7 +407,7 @@ function CommandPalette() {
               <ArrowUpRight className="size-3" />
               {resolvedTheme === "dark" ? "Dark" : "Light"} theme
             </span>
-            <span className="font-mono">↑↓ navigate · ↵ select</span>
+            <span>↑↓ navigate · ↵ select</span>
           </div>
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>

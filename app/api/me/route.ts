@@ -8,7 +8,7 @@ export function GET() {
       $schema: "https://ayantiksarkar.com/api/me",
       ...profile,
       generated_at: new Date().toISOString(),
-      note: "Hi 👋 — if you're reading this, you're exactly the kind of person I like working with.",
+      note: "Hi 👋 - if you're reading this, you're exactly the kind of person I like working with.",
     },
     null,
     2

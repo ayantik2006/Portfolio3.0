@@ -6,6 +6,7 @@ import { Hanken_Grotesk } from "next/font/google";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 import {
   Dialog,
   DialogContent,
@@ -34,13 +35,38 @@ const projects: Project[] = [
     link: "https://hoardspace.in/",
     thumbnail: "/hoardspace_thumbnail.png",
     summary:
-      "CTO at Hoardspace — built a B2B marketplace for OOH/DOOH advertising with scalable frontend, maps and dynamic dashboards.",
+      "Led a team of 3 engineers building a B2B outdoor advertising marketplace for 30+ billboard owners managing 3K+ hoardings, with Razorpay payments, a booking engine and an AI campaign planner.",
     bullets: [
-      "CTO at Hoardspace — built a B2B marketplace for OOH/DOOH advertising",
-      "Developed scalable frontend with Next.js & Tailwind",
-      "Integrated maps and dynamic dashboards for ad discovery & management",
-      "Designed APIs and system architecture for booking workflows",
-      "Led product development from concept to deployment",
+      "Led a team of 3 engineers building HoardSpace, an outdoor advertising marketplace for 30+ billboard owners managing 3K+ hoardings, which generated Rs. 6+ lakhs in revenue within 3 months of marketing.",
+      "Designed per-IP rate limiting (Upstash Redis, in-memory fallback), a honeypot banning scrapers for 24h without blocking Google's crawlers, and prompt-injection defenses that isolate untrusted page context in AI chat.",
+      "Architected the core backend: RESTful APIs, Razorpay payments, authentication, and the booking engine.",
+      "Set up GitHub CI/CD and built a role-based admin dashboard for inventory and booking management.",
+      "Developed HoardSpace AI, a campaign planning assistant (Anthropic models on AWS Bedrock) that recommends ad locations and estimates campaign cost and reach from budget, audience, location, and goals.",
+    ],
+  },
+  {
+    title: "Threadpool - AI Agent Governance (Next.js, MongoDB)",
+    link: "https://threadpool.in",
+    status: "ongoing",
+    thumbnail: "/threadpool-thumbnail.png",
+    summary:
+      "An agent governance system to register, monitor, and audit AI agents, with an external-agent registry.",
+    bullets: [
+      "Built an agent governance system to register, monitor, and audit AI agents, with an external-agent registry",
+      "Implemented RBAC, policy enforcement, and circuit breakers against runaway agents and excess token use",
+      "Shipped audit trails, API keys, webhooks, and agent workflows; integrated AI models including Sarvam AI",
+    ],
+  },
+  {
+    title: "Keel - Secrets Manager (Next.js, MongoDB, Clerk)",
+    link: "https://keel.hoardspace.in",
+    thumbnail: "/keel-thumbnail.png",
+    summary:
+      "An Infisical-inspired secrets manager, used internally at HoardSpace, to replace insecure .env sharing.",
+    bullets: [
+      "Created an Infisical-inspired secrets manager, used internally at HoardSpace, to replace insecure .env sharing, with secret CRUD, Development/Staging/Production isolation, and version history",
+      "Implemented role-based access control for project permissions, with audit logging of configuration changes",
+      "Developed a CLI runtime-injection workflow (keel run -- npm run dev) to run applications locally without exposing raw environment files",
     ],
   },
   {
@@ -51,7 +77,7 @@ const projects: Project[] = [
     summary:
       "A modern reusable component library built with React, Next.js & Tailwind, including the Pulse Toast npm package.",
     bullets: [
-      "Built Pulse UI — a modern reusable component library",
+      "Built Pulse UI - a modern reusable component library",
       "Developed scalable components using React, Next.js & Tailwind",
       "Created Pulse Toast (npm package with 1500+ downloads)",
       "Designed APIs and system architecture for booking workflows",
@@ -66,7 +92,7 @@ const projects: Project[] = [
     summary:
       "A smart link intelligence platform turning static links into trackable, insight-driven experiences with real-time analytics.",
     bullets: [
-      "Built Elimics — a smart link intelligence platform",
+      "Built Elimics - a smart link intelligence platform",
       "Turned static links into trackable, insight-driven experiences",
       "Enabled real-time analytics (views, clicks, engagement tracking)",
       "Designed scalable backend for link processing & data capture",
@@ -99,9 +125,9 @@ const projects: Project[] = [
     link: "http://npmjs.com/package/@ayantik2006/mini-jwt",
     thumbnail: "/mini-jwt.png",
     summary:
-      "MiniJWT — a JWT-like authentication system built from scratch using Node.js native cryptographic APIs.",
+      "MiniJWT - a JWT-like authentication system built from scratch using Node.js native cryptographic APIs.",
     bullets: [
-      "Built MiniJWT — a JWT-like authentication system from scratch",
+      "Built MiniJWT - a JWT-like authentication system from scratch",
       "Implemented Base64URL encoding and decoding for token serialization",
       "Implemented HMAC-SHA256 based token signing and verification",
       "Designed tamper detection by validating cryptographic signatures",
@@ -124,7 +150,7 @@ function ProjectCard({
 }) {
   return (
     <div
-      className={`flex flex-col border overflow-hidden ${
+      className={`group h-full flex flex-col border overflow-hidden transition-colors duration-300 hover:border-neutral-500 ${
         theme === "dark"
           ? "bg-neutral-950 border-neutral-800"
           : "bg-white border-neutral-200"
@@ -134,11 +160,11 @@ function ProjectCard({
         <div className="relative w-full aspect-video overflow-hidden bg-neutral-900">
           <Image
             src={project.thumbnail}
-            alt={`${project.title} — project screenshot by Ayantik Sarkar`}
+            alt={`${project.title} - project screenshot by Ayantik Sarkar`}
             unoptimized
             fill
             sizes="(min-width: 640px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:blur-[1px]"
           />
         </div>
       </a>
@@ -181,24 +207,25 @@ export default function ProjectsClient() {
       className={`min-h-screen items-center justify-center pt-14 sm:pt-16 ${theme === "dark" ? "bg-[#100F0F]" : "bg-[#F9F9F9]"} ${hanken.className}`}
     >
       <div className="w-full flex flex-col items-center justify-center px-6 py-4 max-w-3xl mx-auto">
-        <h1
-          className={`text-2xl ${hanken.className} font-semibold mr-auto mt-5`}
-        >
-          Projects by Ayantik Sarkar
-        </h1>
-        <h2 className="mr-auto mt-1 text-neutral-400 font-normal text-base">
-          A selection of projects I&apos;ve built and shipped.
-        </h2>
+        <Reveal className="mr-auto mt-5">
+          <h1 className={`text-2xl ${hanken.className} font-semibold`}>
+            Projects by Ayantik Sarkar
+          </h1>
+          <h2 className="mt-1 text-neutral-400 font-normal text-base">
+            A selection of projects I&apos;ve built and shipped.
+          </h2>
+        </Reveal>
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full mt-6">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              project={project}
-              theme={theme}
-              onDetails={() => setActiveProject(project)}
-            />
+          {projects.map((project, i) => (
+            <Reveal key={project.title} delay={(i % 2) * 0.08} scale={0.96}>
+              <ProjectCard
+                project={project}
+                theme={theme}
+                onDetails={() => setActiveProject(project)}
+              />
+            </Reveal>
           ))}
         </div>
 
@@ -212,7 +239,7 @@ export default function ProjectsClient() {
                 <div className="w-full overflow-hidden border-b border-neutral-200 dark:border-neutral-800">
                   <img
                     src={activeProject.thumbnail}
-                    alt={`${activeProject.title} — project screenshot by Ayantik Sarkar`}
+                    alt={`${activeProject.title} - project screenshot by Ayantik Sarkar`}
                     className="w-full h-auto object-cover"
                   />
                 </div>

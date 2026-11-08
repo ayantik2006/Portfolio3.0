@@ -7,7 +7,7 @@ const path = "/blogs/what-one-year-frontend-dev-taught-me";
 const title =
   "What 1 Year of Frontend Development Taught Me About Building Memorable Websites";
 const description =
-  "Ayantik Sarkar shares lessons from a year of frontend development — why memorable websites are built on intention, restraint, and purposeful motion, not flashy effects.";
+  "Ayantik Sarkar shares lessons from a year of frontend development - why memorable websites are built on intention, restraint, and purposeful motion, not flashy effects.";
 const datePublished = "2026-06-12";
 
 export const metadata: Metadata = {

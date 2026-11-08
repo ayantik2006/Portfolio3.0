@@ -4,7 +4,7 @@ import React, { useMemo, useState } from "react";
 import { motion, useReducedMotion, useSpring } from "framer-motion";
 
 /* ------------------------------------------------------------------ *
- *  Pixel monogram — "A · S". Front faces the viewer, extruded
+ *  Pixel monogram - "A · S". Front faces the viewer, extruded
  *  up-right for depth. Monochrome via currentColor, so it inverts
  *  cleanly between light and dark themes.
  * ------------------------------------------------------------------ */

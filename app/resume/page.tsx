@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/lib/seo";
 
 const title = "Resume";
 const description =
-  "View and download Ayantik Sarkar's professional resume — full stack developer, CTO at HoardSpace, and Civil Engineering student at NIT Rourkela.";
+  "View and download Ayantik Sarkar's professional resume - full stack developer, CTO at HoardSpace, and Civil Engineering student at NIT Rourkela.";
 
 export const metadata: Metadata = {
   title,

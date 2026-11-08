@@ -16,7 +16,7 @@ export const profile = {
   email: AUTHOR_EMAIL,
   website: SITE_URL,
   status: "open to interesting problems",
-  now: "Building Elimics and Pulse UI",
+  now: "Building threadpool.in",
   stack: [
     "TypeScript",
     "React",

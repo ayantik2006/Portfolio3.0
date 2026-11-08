@@ -351,20 +351,10 @@
     pointer-events: none;
   }
 
-  /* faint ruled grid + a dot in each cell, vignetted toward the edges */
+  /* a dot in each cell, vignetted toward the edges */
   .dotgrid-base {
     background-image:
-      radial-gradient(var(--dg-dot) 1.1px, transparent 1.6px),
-      repeating-linear-gradient(
-        to right,
-        var(--dg-line) 0 1px,
-        transparent 1px 22px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--dg-line) 0 1px,
-        transparent 1px 22px
-      );
+      radial-gradient(var(--dg-dot) 1.1px, transparent 1.6px);
     background-size: 22px 22px;
     background-position: center;
     -webkit-mask-image: radial-gradient(

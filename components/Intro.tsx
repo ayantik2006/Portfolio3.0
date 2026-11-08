@@ -86,21 +86,13 @@ function Intro() {
       <motion.div className={cellLeft} variants={itemVariants}>
         <IntroIcon icon={<CodeXml size={16} className="stroke-[#9F9FA9]" />} />
         <p>
-          Building &nbsp;
+          Building&nbsp;
           <a
-            href="https://elimics.com"
+            href="https://threadpool.in"
             target="_blank"
             className="hover:underline font-semibold"
           >
-            Elimics
-          </a>
-          &nbsp;&nbsp;and&nbsp;&nbsp;
-          <a
-            href="https://pulseui-henna.vercel.app/"
-            target="_blank"
-            className="hover:underline font-semibold"
-          >
-            Pulse UI
+            threadpool.in
           </a>
         </p>
       </motion.div>
@@ -137,7 +129,7 @@ export default Intro;
 
 /*
 CTO@hoardspace -
-building pulseui - 
+building threadpool.in - 
 location - 
 phone
 email-

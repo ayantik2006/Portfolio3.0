@@ -16,7 +16,7 @@ export default function ConsoleEasterEgg() {
     const accent = "color:#22c55e;font-size:12px;";
 
     console.log(
-      `%c${profile.name}%c — ${profile.role}\n%cyou opened the console. respect.`,
+      `%c${profile.name}%c - ${profile.role}\n%cyou opened the console. respect.`,
       heading,
       dim,
       dim

@@ -4,11 +4,11 @@ export const PERSON_NAME = "Ayantik Sarkar";
 export const PERSON_ALTERNATE_NAMES = ["Ayantik", "Ayantik Sarkar Developer"];
 
 export const SITE_NAME = "Ayantik Sarkar";
-export const SITE_TITLE_DEFAULT = "Ayantik Sarkar — Full Stack Developer & CTO at HoardSpace";
+export const SITE_TITLE_DEFAULT = "Ayantik Sarkar - Full Stack Developer & CTO at HoardSpace";
 export const SITE_TITLE_TEMPLATE = "%s | Ayantik Sarkar";
 
 export const SITE_DESCRIPTION =
-  "Ayantik Sarkar is a full stack developer and CTO at HoardSpace, studying Civil Engineering at NIT Rourkela. Creator of Pulse UI, Elimics, and FormAS — building scalable web apps with Next.js, React, and TypeScript.";
+  "Ayantik Sarkar is a full stack developer and CTO at HoardSpace, studying Civil Engineering at NIT Rourkela. Creator of Pulse UI, Elimics, and FormAS - building scalable web apps with Next.js, React, and TypeScript.";
 
 export const AUTHOR_EMAIL = "ayantik.sarkar2020@gmail.com";
 
@@ -56,7 +56,7 @@ export const DEFAULT_OG_IMAGE = {
   url: `${SITE_URL}/og-image.png`,
   width: 1536,
   height: 1024,
-  alt: "Ayantik Sarkar — Full Stack Developer",
+  alt: "Ayantik Sarkar - Full Stack Developer",
 };
 
 function absoluteUrl(path = "") {

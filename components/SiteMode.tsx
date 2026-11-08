@@ -29,7 +29,7 @@ export default function SiteMode() {
         setMode(saved);
       }
     } catch {
-      /* private mode / disabled storage — stay on default */
+      /* private mode / disabled storage - stay on default */
     }
   }, []);
 
@@ -175,7 +175,7 @@ function MachineView({ reduce }: { reduce: boolean }) {
         className="relative mx-auto max-w-2xl px-5 py-16 font-mono text-[13px] leading-relaxed text-neutral-400 sm:py-24"
       >
         <motion.p variants={line} className="text-neutral-600">
-          machine view — press{" "}
+          machine view - press{" "}
           <span className="text-neutral-400">esc</span> or tap{" "}
           <span className="text-neutral-400">human</span> to return
         </motion.p>

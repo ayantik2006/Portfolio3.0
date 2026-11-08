@@ -80,7 +80,7 @@ function Blogs() {
         More blogs
         <ArrowUpRight size={14} />
       </Link>
-      <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
+      <div className="w-screen h-0 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15" />
     </div>
   );
 }

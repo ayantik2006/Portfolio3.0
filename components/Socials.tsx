@@ -29,7 +29,7 @@ function Socials() {
     <div
       className={`${hanken.className} mt-10 flex flex-col gap-3 items-cente justify-center w-full p-2 sm:p-0`}
     >
-      <div className="w-screen h-6 -mt-10 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
+      <div className="w-screen h-0 -mt-10 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15" />
       <h2 className="text- py- font-semibold">My Socials</h2>
       <div className="flex items-center gap-2 flex-wrap">
         {socialLinks.map(({ label, href, icon: Icon }) => (
@@ -44,7 +44,7 @@ function Socials() {
           </Link>
         ))}
       </div>
-      <div className="w-screen h-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)] -mb-6" />
+      <div className="w-screen h-0 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15 -mb-6" />
     </div>
   );
 }

@@ -9,7 +9,7 @@ import {
 
 const title = "Projects";
 const description =
-  "Explore full stack projects built by Ayantik Sarkar, including HoardSpace, Pulse UI, Elimics, and FormAS — built with Next.js, React, and TypeScript.";
+  "Explore full stack projects built by Ayantik Sarkar, including HoardSpace, Threadpool, Keel, Pulse UI, Elimics, and FormAS - built with Next.js, React, and TypeScript.";
 
 export const metadata: Metadata = {
   title,
@@ -37,6 +37,20 @@ const projectsForSchema = [
       "A B2B marketplace for OOH/DOOH advertising with scalable frontend, maps, and dynamic dashboards.",
     url: "https://hoardspace.in/",
     image: "/hoardspace_thumbnail.png",
+  },
+  {
+    name: "Threadpool",
+    description:
+      "An agent governance system to register, monitor, and audit AI agents, with RBAC, policy enforcement, circuit breakers, audit trails, API keys and webhooks.",
+    url: "https://threadpool.in",
+    image: "/threadpool-thumbnail.png",
+  },
+  {
+    name: "Keel",
+    description:
+      "An Infisical-inspired secrets manager with role-based access, audit logging, environment isolation and a CLI runtime-injection workflow.",
+    url: "https://keel.hoardspace.in",
+    image: "/keel-thumbnail.png",
   },
   {
     name: "Pulse UI",

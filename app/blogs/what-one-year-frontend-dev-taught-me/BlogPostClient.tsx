@@ -112,7 +112,7 @@ export default function BlogPostClient() {
         </div>
         <p className="p-3 dark:text-neutral-300 text-neutral-700 italic border-l-4">
           “Very often, design is the most immediate way of defining what
-          products become in people’s minds.” <br />— Jony Ive
+          products become in people’s minds.” <br />- Jony Ive
         </p>
         <h2
           className={`text-xl ${hanken.className} font-semibold mr-auto pl-3 mt-5`}
@@ -302,7 +302,7 @@ export default function BlogPostClient() {
           system.
           <br />
           <br />
-          As a beginner, I used to think good design came from adding more —
+          As a beginner, I used to think good design came from adding more -
           more animations, more effects, more visual complexity.
           <br />
           <br />
@@ -448,7 +448,7 @@ export default function BlogPostClient() {
           <br />
           <br />
           As I continue learning and building, that’s the standard I want to aim
-          for — not just creating websites that work, but creating websites that
+          for - not just creating websites that work, but creating websites that
           people remember.
           <br />
           <br />

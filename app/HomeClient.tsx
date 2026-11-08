@@ -17,6 +17,7 @@ import GitHub from "@/components/GitHub";
 import Footer from "@/components/Footer";
 import NowPlaying from "@/components/NowPlaying";
 import IsoInitials from "@/components/IsoInitials";
+import Reveal from "@/components/Reveal";
 import DotGridSpotlight from "@/components/DotGridSpotlight";
 
 const hanken = Hanken_Grotesk({
@@ -48,39 +49,63 @@ export default function HomeClient() {
         </div>
         <div className="relative flex flex-row items-end gap-5 w-full pt-5">
           <div className="absolute bottom-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] border-b-2 border-dotted border-black/25 dark:border-white/15" />
-          <Banner />
-          <Name />
+          <Reveal blur={14} scale={0.9} y={0}>
+            <Banner />
+          </Reveal>
+          <Reveal className="min-w-0 flex-1" delay={0.1} blur={12}>
+            <Name />
+          </Reveal>
         </div>
-        <div className="w-screen h-6 mt-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
-        <QuickActions />
-        <NowPlaying className="mt-5 w-full" />
-        <div className="w-screen h-6 mt-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-y-2 border-dotted border-black/25 dark:border-white/15 text-black/10 dark:text-white/5 bg-[repeating-linear-gradient(45deg,transparent_0px,transparent_5px,currentColor_5px,currentColor_6px)]" />
+        <div className="w-screen h-0 mt-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15" />
+        <Reveal className="w-full" delay={0.05} blur={8}>
+          <QuickActions />
+        </Reveal>
+        <Reveal className="w-full" delay={0.1} blur={8}>
+          <NowPlaying className="mt-5 w-full" />
+        </Reveal>
+        <div className="w-screen h-0 mt-6 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] border-t-2 border-dotted border-black/25 dark:border-white/15" />
         <section id="about" className="w-full scroll-mt-24">
           <Intro />
         </section>
         <section id="socials" className="w-full scroll-mt-24">
-          <Socials />
+          <Reveal>
+            <Socials />
+          </Reveal>
         </section>
         <section id="experience" className="w-full scroll-mt-24">
-          <Experience />
+          <Reveal>
+            <Experience />
+          </Reveal>
         </section>
         <section id="projects" className="w-full scroll-mt-24">
-          <Projects />
+          <Reveal>
+            <Projects />
+          </Reveal>
         </section>
         <section id="writing" className="w-full scroll-mt-24">
-          <Blogs />
+          <Reveal>
+            <Blogs />
+          </Reveal>
         </section>
         <section id="stack" className="w-full scroll-mt-24">
-          <Stack />
+          <Reveal>
+            <Stack />
+          </Reveal>
         </section>
         <section id="education" className="w-full scroll-mt-24">
-          <Education />
+          <Reveal>
+            <Education />
+          </Reveal>
         </section>
         <section id="github" className="w-full scroll-mt-24">
-          <GitHub />
+          <Reveal>
+            <GitHub />
+          </Reveal>
         </section>
         <section id="contact" className="w-full scroll-mt-24">
-          <Footer />
+          <Reveal>
+            <Footer />
+          </Reveal>
         </section>
       </div>
     </div>

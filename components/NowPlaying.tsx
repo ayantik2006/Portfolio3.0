@@ -92,7 +92,7 @@ function NowPlaying({ className = "" }: { className?: string }) {
       href={track.url}
       target="_blank"
       rel="noopener noreferrer"
-      title={`${track.song ?? ""}${track.artist ? ` — ${track.artist}` : ""} · open in Spotify`}
+      title={`${track.song ?? ""}${track.artist ? ` - ${track.artist}` : ""} · open in Spotify`}
       className={`group inline-flex max-w-full items-center gap-2 font-mono text-sm text-neutral-500 transition-colors hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 ${className}`}
     >
       {isPlaying ? <Equalizer /> : <SpotifyGlyph />}
@@ -105,7 +105,7 @@ function NowPlaying({ className = "" }: { className?: string }) {
         aria-hidden="true"
         className="shrink-0 text-neutral-300 dark:text-neutral-600"
       >
-        —
+        -
       </span>
 
       <span className="min-w-0 truncate">

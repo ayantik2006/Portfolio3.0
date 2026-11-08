@@ -11,7 +11,7 @@ function Banner() {
             fill
             sizes="(min-width: 640px) 128px, 96px"
             priority
-            alt="Ayantik Sarkar — Full Stack Developer and CTO at HoardSpace"
+            alt="Ayantik Sarkar - Full Stack Developer and CTO at HoardSpace"
             className="rounded-lg p-1.5 sm:p-2 object-cover"
           />
         </div>
